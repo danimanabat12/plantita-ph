@@ -556,6 +556,10 @@ li .fa-facebook, li .fa-instagram {
     /* border: 1px solid; */
 }
 
+.articles-slide a {
+    text-decoration: none;
+}
+
 .articles {
     margin: 1em;
 }
