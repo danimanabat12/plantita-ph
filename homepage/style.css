@@ -54,12 +54,12 @@ nav {
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey; 
     border-radius: 10px;
-    background: var(--clr--light-main);
+    background: gainsboro;
   }
    
 
 ::-webkit-scrollbar-thumb {
-    background: var(--clr--main); 
+    background: var(--clr--secondary); 
     border-radius: 10px;
   }
   

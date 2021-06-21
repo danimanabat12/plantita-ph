@@ -14,6 +14,7 @@ a {
 }
 
 .inner-shell {
+    visibility: hidden;
     position: fixed;
     transform: translateX(-100%);
     background-color: white;
@@ -151,6 +152,7 @@ a {
 
 .shopping-cart {
     /* left: 0; */
+    visibility: hidden;
     position: fixed;
     transform: translateX(-100%);
     background-color: white;

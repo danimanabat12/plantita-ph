@@ -1,0 +1,646 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;700&display=swap');
+
+/* Already defined the default CSS on the nav-bar css */
+* {
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+:root {
+    --clr--main: #7d4f38; 
+    --clr--secondary: #164a41;
+    --clr--neutral: #000000;
+    --clr--white: #ffffff;
+    --clr--bg: #f3ebe1;
+    --clr--light-main: #c6a281;
+
+    --ff--main: 'Roboto', sans-serif; 
+    --ff--accent: 'Playfair Display', serif;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+    background: gainsboro;
+  }
+   
+
+::-webkit-scrollbar-thumb {
+    background: var(--clr--secondary); 
+    border-radius: 10px;
+  }
+  
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--clr--secondary); 
+  }
+
+
+h1 {
+    font-family: var(--ff--accent);
+}
+
+h3 {
+    font-family: var(--ff--main);
+    font-weight: normal;
+}
+/* Pre-styling to avoid confusion with the nav bar */
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+    /* overflow: hidden; */
+}
+
+p {
+    font-family: var(--ff--main);
+}
+
+.container-wrapper {
+    display: flex; 
+}
+
+.sections {
+    width: 100%;
+    margin-left: 6.375rem;
+}
+
+@media screen and (max-width: 800px) {
+    .sections {
+        margin-left: 0px;
+    }
+}
+/* ========Header styling======== */
+
+.hero {
+    width: 100%;
+    height: 260px;
+    background-image: url(images/top-bg.png);
+    display: grid;
+    place-content: center;
+}
+
+.super-center {
+    width: fit-content;
+    color: var(--clr--light-main);
+    place-items: center;
+    text-align: center;
+}
+
+/* --header typography-- */
+
+.super-center h1 {
+    font-weight: normal;
+    font-size: 4.375rem;
+    padding-bottom: 0px;
+    
+}
+
+.super-center h3 {
+    font-size: 1.875rem;
+    font-weight: 300;
+}
+
+/* ==========Main styling=========== */
+form {
+    font-family: var(--ff--main);
+    font-size: 0.9375rem;
+    color: var(--clr--light-main);
+}
+input, label {
+    display: block; 
+}
+
+label {
+    margin-bottom: 9px;
+}
+
+.title-p{
+    color: var(--clr--main);
+    font-weight: bold;
+}
+
+input, textarea {
+    border: 1px solid;
+    border-color: var(--clr--light-main);
+    width: 100%;
+    border-radius: 10px; 
+    padding-left: 10px;
+}
+
+.form-title {
+    max-width: 390px;
+}
+.form-title h2 {
+    font-family: var(--ff--main);
+    color: var(--clr--light-main); 
+    font-weight: 300; 
+    font-size: 1.875rem;
+}
+
+.form-title h1 {
+    font-family: var(--ff--accent);
+    color:#7d4f38; 
+    font-weight: normal; 
+    font-size: 2.5rem;
+}
+
+.form1 input {
+    width: 100%;
+    /* max-width: 22.5rem;  */
+    height: 3.125rem;
+}
+
+.complex-bottom-form input[type='text'] {
+    width: 100%;
+    /* sa mobile ko na ito i-add */
+    /* max-width: 13.875rem;  */
+    height: 3.125rem;
+}
+
+textarea {
+    max-width: 47.625rem; 
+    resize: none;
+    height: 3.125rem;
+}
+
+.inner-details p {
+    font-family: var(--ff--main); 
+    font-size: 0.75rem; 
+    color: var(--clr--light-main);
+    width: 87px;
+}
+
+.inner-details * {
+    line-height: 5px;
+}
+
+/* For logos, para dili ma-pangit ang quality */
+
+.shipping img {
+    margin: 0 auto;
+}
+.jt {
+    max-width: 76px;
+    max-height: 16px;
+}
+.nj {
+    max-width: 78px;
+    max-height: 19px;
+}
+.lbc {
+    max-width: 39px;
+    max-height: 34px;
+}
+
+.shipping {
+    max-width: 13.875rem;
+    height: 4.375rem;
+    border: 1px solid;
+    border-radius: 10px;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shipping input[type="radio"]{
+    width: 30px;
+    margin: auto 0;
+}
+
+.form3 input {
+    height: 3.125rem;
+}
+
+.input-type-2 {
+    max-width: 10.5rem;
+}
+
+.btn-solid {
+    margin: 2rem auto 2rem auto;
+    max-width: 15rem; 
+    height: 50px;
+    border-radius: 0;
+    /* background-color: var(--clr--main); */
+    background-color: white;
+    color: var(--clr--main); 
+    font-family: var(--ff--main);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-solid:hover {
+    background-color: var(--clr--main);
+    color: var(--clr--bg);
+    transition: .3s;
+    border: none;
+}
+
+/* =========footer========= */
+footer {
+    width: 100%;
+    background-color: #7d4f38;
+    padding: 6.25rem 0;
+    color: var(--clr--bg);
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 19.5625em; 
+    margin: 0 auto;
+}
+
+.footer-logo img{
+    max-width: 3.25em;
+}
+
+.footer-logo h2{
+    font-size: 1.5625rem;
+    color: var(--clr--bg);
+    margin-bottom: 1.5625rem;
+}
+
+.footer-socmeds i{
+    color: var(--clr--bg); 
+    margin: 0 1.25rem 1.5625rem 1.25rem;
+}
+
+.footer-socmeds i:hover {
+    color: var(--clr--light-main);
+}
+
+.copyright p{
+    text-align: center;
+}
+
+/* Pakapin */
+.style1 {
+    float: left;
+}
+
+.inner-details label {
+    font-weight: bold;
+}
+
+/* ===========================================================================================================OVERALL FORMATTING */
+
+.sections {
+    display: flex;
+    flex-direction: column;
+}
+
+.border-left {
+    display: none;
+}
+
+.main {
+    margin: 0 auto;
+}
+
+.main-form {
+    width: 100%;
+    margin: 3rem auto;
+}
+
+.form-title {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 17.125rem;
+}
+
+input, textarea {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.style2 {
+    float: none;
+}
+
+.title-p {
+    margin-bottom: 1rem;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.shipping {
+    margin: 0 auto 1rem auto;
+}
+
+.inner-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chevron {
+    cursor: pointer;
+    transform: rotate(270deg);
+}
+
+.btn-solid {
+    padding-left: 0;
+}
+
+
+.style2 {
+    width: 100%;
+}
+
+.first-style {
+    margin-right: 1rem;
+}
+
+/* ====Para sa order summary====*/ 
+.top-order-summary {
+    background-color: var(--clr--main);
+    /* position: fixed; */
+    width: 100%;
+    height: 2.5rem;
+    display: grid;
+    place-content: center;
+}
+
+.outer-shell-os{
+    z-index: 1;
+    color: var(--clr--bg);
+    font-family: var(--ff--main);
+    display: flex;
+    width: fit-content; 
+}
+
+.clickhere-btn {
+    cursor: pointer;
+    border: 1px solid white;    
+    font-size: 0.675rem;
+    margin-left: 1rem;
+    padding: 0 5px;
+    display: grid;
+    place-content: center;
+}
+
+.clickhere-btn:hover {
+    background-color: white;
+    color: var(--clr--secondary);
+}
+
+.inner-shell-os {
+    transform: translateY(-100%);
+    position: fixed;
+    z-index: 3;
+    background-color: var(--clr--bg);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    transition: transform 0.5s ease;
+    display: grid;
+    place-content: center;
+}
+.inner-shell-os-active {
+    transform: translateY(0%);
+}
+nav {
+    z-index: 4;
+}
+
+.close-me {
+    font-family: var(--ff--accent);
+    color: var(--clr--secondary);
+    width: fit-content;
+    cursor: pointer;
+}
+.close-me:hover {
+    font-weight: bold;
+    transition: .3s;
+}
+
+.top-part-os {
+    width: fit-content;
+    margin: 1rem auto;
+}
+.top-part-os img {
+    width: 5rem;
+    border: 1px dotted;
+    border-color: var(--clr--secondary);
+    border-radius: 40px;
+}
+
+.middle-part-os {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    max-height: 50vh;
+    border: 1px dotted;
+    border-color: var(--clr--secondary);
+    border-radius: 10px;
+    padding: 0 1rem;
+}
+.os-title {
+    margin: 0 auto;
+    width: fit-content;
+    font-family: var(--ff--accent);
+    font-size: 3.125rem;
+    font-weight: 400;
+    color: var(--clr--main);
+}
+
+.last-part-os {
+    width: fit-content;
+    margin: 2.5rem auto 0 auto;
+}
+
+
+.order-summary-items {
+    width: 100%;
+    max-width: 25rem;
+    height: 50vh;
+}
+
+.payment-summary-os {
+    font-family: var(--ff--main);
+    font-weight: bold; 
+    color: var(--clr--main);
+}
+
+.show-tot {
+    color: var(--clr--secondary);
+    font-weight: 400;
+}
+
+/* =========Outside pages========== */
+.others {
+    z-index: 6;
+    width: 100%;
+    background-color: var(--clr--white);
+    height: 100vh;
+}
+
+.others h1 {
+    font-family: var(--ff--accent);
+    font-size: 2.5rem; 
+    font-weight: 400;
+    color: var(--clr--secondary);
+}
+
+.others span {
+    color: var(--clr--main);
+}
+
+.btns {
+    cursor: pointer;
+    width: 12.5rem;
+    text-align: center;
+    border: 1px solid;
+    border-color: var(--clr--light-main);
+    height: 2.8125rem;
+    display: grid; 
+    place-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+.btns:hover {
+    background-color: #7d4f38;
+    border: none;
+    transition: .5s;
+}
+
+.btns:hover p{
+    color: var(--clr--bg);
+    
+}
+
+.others{
+    top: 0;
+    transform: translateY(-100%);
+    position: fixed;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    transition: transform 0.5s ease-in;
+}
+
+.img-wrapper {
+    position: absolute;
+    right: 0; 
+    bottom: 0;
+}
+
+.img-wrapper2 {
+    position: absolute;
+    right: 0; 
+    top: 0;
+}
+
+.confirmation-wrapper {
+    width: 100%;
+    max-width: 28.125rem;
+}
+
+.confirmation *{
+    margin-bottom: 25px;
+}
+
+.others .second img{
+    top: 0;
+}
+
+.others p{
+    color: var(--clr--light-main);
+}
+/* ========================================Media Query========================== */
+
+@media (min-width: 800px) {
+    footer {
+        padding: 6.25rem 0 6.25rem 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .main-form {
+        /* border: 1px solid; */
+        width: 100%;
+        min-width: 1000px;
+        max-width: 1150px;
+    }
+    .main {
+        padding: 0;
+    }
+    .forms {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 6.25rem;
+    }
+    .style2 {
+        float: left;
+        width: auto;
+    }
+    .form-title{
+        text-align: left;
+        margin-left: 0;
+        margin-top: 0;
+        min-width: 17.1875rem;
+        height: fit-content;
+    }
+    .top-forms {
+        margin-top: 5rem;
+    }
+    .form1 input {
+        width: 20rem;
+        max-width: 20rem;
+    }
+    .form1 .basic-top-form {
+        display: flex;
+        width: 100%;
+        max-width: 45rem;
+    }
+    .input-type-1 {
+        max-width: 22.5rem;
+    }
+    .form-content {
+        width: 100%;
+        margin-left: 50px;
+    }
+
+    .shipping-method .complex-bottom-form {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .shipping {
+        margin: 0;
+        width: 13rem;
+    }
+
+    .form2 .inner-bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .form2 .inner-bottom input{
+        width: 13rem;
+    }
+
+    .first-style {
+        margin: 0;
+    }
+
+    .top-top input{
+        width: 23.75rem;
+    }
+
+    .form3 .style1 input {
+        width: 9rem;
+    }
+}
