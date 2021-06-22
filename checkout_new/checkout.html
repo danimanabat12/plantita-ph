@@ -254,8 +254,8 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class= "btns btn-solid checkout-btn" onclick="confirmationSlide()">Submit</button>
-                        <!-- <input type="submit" value="Submit" class= "btn-solid checkout-btn" onclick=""> -->
+                        <!-- <button type="submit" class= "btns btn-solid checkout-btn" onclick="confirmationSlide()">Submit</button> -->
+                        <input type="submit" value="Submit" class= "btn-solid checkout-btn" onclick="return confirm('Are you sure?')"/>
                     </form>     
                 </div>
             </div>
@@ -277,7 +277,7 @@
             </footer>
         </div>
     </div>
-    <div class="others first-popup">
+    <!-- <div class="others first-popup">
         <div class="confirmation-wrapper">
             <div class="confirmation">
                 <h1>Confirm order?</h1>
@@ -309,7 +309,7 @@
         <div class="img-wrapper2">
             <img src="images/thankyou-bg.png" alt="plant leaves">
         </div>
-    </div>
+    </div> -->
     <script src="app.js"></script>
     <script>
         var x = window.matchMedia("(min-width: 1200px)")

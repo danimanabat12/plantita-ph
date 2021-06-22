@@ -60,6 +60,10 @@ p {
     font-family: var(--ff--main);
 }
 
+a {
+    text-decoration: none;
+}
+
 .container-wrapper {
     display: flex; 
 }
@@ -520,7 +524,7 @@ nav {
 
 .others{
     top: 0;
-    transform: translateY(-100%);
+    /* transform: translateY(-100%); */
     position: fixed;
     display: flex;
     margin: 0 auto;
@@ -551,9 +555,17 @@ nav {
     margin-bottom: 25px;
 }
 
-.others .second img{
-    top: 0;
+
+.img-wrapper2 {
+    z-index: -1;
+    right: 0;
 }
+
+.img-wrapper2 img {
+    width: 100%;
+    height: auto;
+}
+
 
 .others p{
     color: var(--clr--light-main);
