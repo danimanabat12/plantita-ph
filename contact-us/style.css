@@ -63,13 +63,13 @@ body {
 }
 
 /* =====================styling======================= */
-h1 {
+.sections h1 {
     font-size: 3.5rem;
     margin-bottom: 3rem;
     text-align: center;
 }
 
-h2 {
+.sections h2 {
     font-size: 2rem;
 }
 
