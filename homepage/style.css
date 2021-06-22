@@ -30,6 +30,7 @@ body {
     max-width: 1920px;
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
 }
 
 .sections {
@@ -102,6 +103,7 @@ nav a {
 }
 
 .inner-shell {
+    visibility: hidden;
     position: fixed;
     transform: translateX(-100%);
     background-color: white;
@@ -243,6 +245,7 @@ nav a {
 
 .shopping-cart {
     /* left: 0; */
+    visibility: hidden;
     position: fixed;
     transform: translateX(-100%);
     background-color: white;
