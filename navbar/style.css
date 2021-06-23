@@ -6,8 +6,12 @@
     box-sizing: border-box;
 }
 
+.outer-shell {
+    background-color: white;
+    border: 1px solid;
+}
 
-a {
+nav a {
     text-decoration: none;
     color: white;
     color: #7d4f38;
@@ -209,7 +213,6 @@ a {
 
 .shopping-list {
     width: 80%;
-    /* border: 1px solid black; */
     height: 100%;   
 }
 
