@@ -39,11 +39,19 @@ body {
 
 section {
     width: 100%;
-    z-index: 0;
+    z-index: -1;
 }
 
 nav {
     z-index: 1;
+}
+
+.outer-shell {
+    background-color: white;
+}
+
+.cart p { 
+    text-align: center;
 }
 
 /* Custom scrollbar */
@@ -96,7 +104,7 @@ section img:not(.second-page-contents img) {
 
 
 /*===============NAVIGATION==============*/
-nav a {
+/* nav a {
     text-decoration: none;
     color: white;
     color: #7d4f38;
@@ -233,8 +241,6 @@ nav a {
 }
 
 
-
-
 .burger div, .burger-inside div{
     width: 25px;
     height: 3px;
@@ -244,7 +250,6 @@ nav a {
 }
 
 .shopping-cart {
-    /* left: 0; */
     visibility: hidden;
     position: fixed;
     transform: translateX(-100%);
@@ -293,7 +298,6 @@ nav a {
 .shopping-cart-items {
     width: 100%;
     height: 50vh;
-    /* border: 1px solid magenta; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -302,7 +306,6 @@ nav a {
 
 .shopping-list {
     width: 80%;
-    /* border: 1px solid black; */
     height: 100%;   
 }
 
@@ -364,7 +367,7 @@ nav {
         padding-right: 1.5rem;
         padding-top: 2.5rem;
     }
-}
+} */
 
 /* First Page */
 
