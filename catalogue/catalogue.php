@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/6f5f971efa.js" crossorigin="anonymous"></script>
     <title>Catalogue | Plantita ph</title>
+    <link rel="stylesheet" href="../navbar/style.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -184,6 +185,6 @@
             </footer>
         </div>  
     </div>
-    <script src="app.js"></script>
+    <script src="../navbar/app.js"></script>
 </body>
 </html>

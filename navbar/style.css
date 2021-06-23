@@ -135,7 +135,7 @@ a {
     padding: 1rem;
     align-items: center;
     color: #7d4f38; 
-    /* left: 0; */
+    background-color: white;
 }  
 
 .outer-shell .cart {

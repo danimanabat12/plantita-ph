@@ -38,9 +38,9 @@
                     </li>
                     <li class="catalogue-container">
                         <h1><a href="../catalogue/catalogue.php">catalogue</a></h1>
-                        <p><a href="../catalogue/catalogue.php">homeplants</a></p>
-                        <p><a href="../catalogue/catalogue.php">outdoor plants</a></p>   
-                        <p><a href="../catalogue/catalogue.php">succulents</a></p>
+                        <p><a href="../catalogue/homeplant.php">homeplants</a></p>
+                        <p><a href="../catalogue/outdoor.php">outdoor plants</a></p>   
+                        <p><a href="../catalogue/succulent.php">succulents</a></p>
                     </li>
                     <li>
                         <h1><a href="../about-us/aboutus.php">about</a></h1>

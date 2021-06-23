@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/6f5f971efa.js" crossorigin="anonymous"></script>
-    <title>Monstera | Plantita.ph</title>
+    <title>Snake Plant | Plantita.ph</title>
+    <link rel="stylesheet" href="../navbar/style.css">
     <link rel="stylesheet" href="pd-style.css">
 </head>
 <body>
@@ -128,6 +129,6 @@
     </div>
    
 
-    <script src="app.js"></script>
+    <script src="../navbar/app.js"></script>
 </body>
 </html>
