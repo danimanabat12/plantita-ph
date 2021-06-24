@@ -21,17 +21,17 @@
 
 ::-webkit-scrollbar {
     width: 7px;
+    height: 7px;
   }
   
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
     border-radius: 10px;
-    background: gainsboro;
-  }
+    background:#f2f2f2;
+}
    
 
 ::-webkit-scrollbar-thumb {
-    background: var(--clr--secondary); 
+    background: var(--clr--main);
     border-radius: 10px;
   }
   
@@ -406,6 +406,7 @@ input, textarea {
     transition: transform 0.5s ease;
     display: grid;
     place-content: center;
+    padding: 1rem;
 }
 .inner-shell-os-active {
     transform: translateY(0%);
@@ -419,6 +420,7 @@ nav {
     color: var(--clr--secondary);
     width: fit-content;
     cursor: pointer;
+    border-bottom: 1px solid;
 }
 .close-me:hover {
     font-weight: bold;
@@ -441,7 +443,6 @@ nav {
     width: 100%;
     max-width: 800px;
     max-height: 50vh;
-    border: 1px dotted;
     border-color: var(--clr--secondary);
     border-radius: 10px;
     padding: 0 1rem;
@@ -457,14 +458,20 @@ nav {
 
 .last-part-os {
     width: fit-content;
-    margin: 2.5rem auto 0 auto;
+    margin: 2.5rem 0 0 0 ;
+}
+
+.total {
+    margin-top: 1.5rem;
 }
 
 
 .order-summary-items {
     width: 100%;
-    max-width: 25rem;
-    height: 50vh;
+    max-width: 30rem;
+    height: 40vh;
+    overflow-y: scroll;
+    margin-top: 1.5rem;
 }
 
 .payment-summary-os {
@@ -655,4 +662,113 @@ nav {
     .form3 .style1 input {
         width: 9rem;
     }
+}
+
+/* For order summary */
+/* Items style */
+.order-list {
+    display: flex;
+    flex-direction: row;
+    /* height: auto; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.order-list li {
+    margin-bottom: 1.5rem;
+}
+
+.sc-item {
+    display: flex;
+    align-items: center;
+    font-family: var(--ff--main);
+    width: fit-content;
+}
+
+.item-img {
+    position: relative;
+    width: 7rem; 
+    height: 7rem; 
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    margin-right: 2rem;
+}
+
+.item-name {
+    font-family: var(--ff--accent);
+    font-weight: 400; 
+    color: var(--clr--secondary);
+    font-size: 1.563rem;
+    line-height: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.item-classification {
+    color: var(--clr--main);
+}
+
+.item-price {
+    color: var(--clr--light-main);
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    color: var(--clr--main);
+}
+
+.item-info button {
+    color: var(--clr--main);
+}
+
+.info-bottom-part {
+    width: 100%;
+    display: flex;
+}
+
+.item-increase, .item-decrease {
+    width: 1.5rem;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid;
+    font-size: 1rem;
+    border-radius: 0;
+}
+.item-qty {
+    width: 2rem;
+    text-align: center;
+    border: 1px solid;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+}
+
+.info-bottom-part {
+    margin-top: 1rem;
+}
+
+.remove-btn {
+    width: 1.5rem; 
+    height: 1.5rem; 
+}
+
+.remove-btn button {
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 1.5rem; 
+    height: 1.5rem; 
+    color: var(--clr--main);
+    font-family: var(--ff--main);
+    font-size: 0.75rem;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    transition: 0.3s;
+}
+
+.remove-btn button:hover{
+    background-color: var(--clr--main);
+    color: var(--clr--white);
 }

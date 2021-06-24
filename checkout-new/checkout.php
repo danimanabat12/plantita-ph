@@ -12,82 +12,6 @@
 </head>
 <body>
     <div class="container-wrapper">
-        <!-- <nav>
-            <div class="outer-shell">
-                <div class="logo">
-                    <a href="../homepage/index.html"><img src="images/nav-logo.svg" alt="logo"></a>
-                </div>     
-                <div class="burger">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
-                <div class="cart">
-                    <img src="images/shopping-cart.png" alt="cart">
-                    <p id="no-of-items">0</p>
-                </div>
-            </div>   
-            <div class="inner-shell">
-                <div class="top-part">
-                    <div class="logo2">
-                        <img src="images/nav-logo.svg" alt="logo">
-                        <p><a href="../homepage/index.html">Plantita.ph</a></p>
-                    </div>
-                </div>
-                <div class="middle-part">
-                    <ul class="nav-links">
-                        <li>
-                            <h1><a href="../homepage/index.html">home</a></h1>
-                        </li>
-                        <li class="catalogue-container">
-                            <h1><a href="../catalogue/index.html">catalogue</a></h1>
-                            <p><a href="../catalogue/index.html">homeplants</a></p>
-                            <p><a href="../catalogue/index.html">outdoor plants</a></p>   
-                            <p><a href="../catalogue/index.html">succulents</a></p>
-                        </li>
-                        <li>
-                            <h1><a href="../about-us/aboutus.html">about</a></h1>
-                        </li>
-                        <li>
-                            <h1><a href="../filler_page/404page.html">guides</a></h1>
-                        </li>
-                        <li class="sublinks">
-                            <p><a href="../signup-login/login.html">sign in</a></p>
-                            <p><a href="../contact-us/contact.html">contact us</a></p>
-                            <p><a href="../filler_page/404page.html">policies</a></p>
-                            <p><a href="../filler_page/404page.html">help</a></p>
-                        </li>
-                    </ul>
-                    <div class="burger-inside">
-                        <div class="line1"></div>
-                        <div class="line2"></div>
-                        <div class="line3"></div>
-                    </div>
-                </div>
-                <div class="cart-inside">
-                    <img src="images/shopping-cart.png" alt="cart">
-                    <p id="no-of-items">0</p>
-                </div>
-            </div>
-            <div class="shopping-cart">
-                <div class="top-part">
-                    <div class="logo2">
-                        <img src="images/nav-logo.svg" alt="logo">
-                        <p><a href="../homepage/index.html">Plantita.ph</a></p>
-                    </div>
-                    <p class="closing-btn">close</p>
-                </div>
-                <div class="sc-middle-part">
-                    <h1 class="sc-title">My Shopping Cart</h1>
-                    <div class="shopping-cart-items">
-                        <ul class="shopping-list">
-                        </ul>
-                    </div>
-                </div>
-                <div class="cart">
-                </div>
-            </div>    
-        </nav> -->
         <?php
         include_once '../navbar/navbar.php';
         ?>
@@ -120,6 +44,42 @@
                             <h1 class="os-title">Order summary</h1>
                             <div class="order-summary-items">
                                 <ul class="order-list">
+                                    <li class="sc-item">
+                                        <div class="item-img">
+                                            <div class="remove-btn" data-itemID="item1">
+                                                <button>x</button>
+                                            </div>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="info-top-part">
+                                                <h1 class="item-name">Astrophytum</h1>
+                                                <p class="item-price">Price</p>
+                                            </div>
+                                            <div class="info-bottom-part">
+                                                <button type="button" class="item-decrease">-</button>
+                                                <p class="item-qty">1</p>
+                                                <button type="button" class="item-increase">+</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="sc-item">
+                                        <div class="item-img">
+                                            <div class="remove-btn" data-itemID="item2">
+                                                <button>x</button>
+                                            </div>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="info-top-part">
+                                                <h1 class="item-name">Astrophytum</h1>
+                                                <p class="item-price">Price</p>
+                                            </div>
+                                            <div class="info-bottom-part">
+                                                <button type="button" class="item-decrease">-</button>
+                                                <p class="item-qty">1</p>
+                                                <button type="button" class="item-increase">+</button>
+                                            </div>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -279,39 +239,7 @@
             </footer>
         </div>
     </div>
-    <!-- <div class="others first-popup">
-        <div class="confirmation-wrapper">
-            <div class="confirmation">
-                <h1>Confirm order?</h1>
-                <p>Would you like to confirm your order? After confirming, you can no longer make changes on your filled-up information such as your <span>shipping address</span> and <span>contact details</span>.</p>
-            </div>
-           <div class="buttons">
-               <div class="btns place-btn">
-                    <p>Place order</p>
-               </div>
-               <div class="btns go-back-btn">
-                    <p>I would like to change something</p>
-               </div>
-           </div>
-        </div>
-        <div class="img-wrapper">
-            <img src="images/order_confirmation_pic.png" alt="hands holding a plant">
-        </div>
-    </div>
-    <div class="others second-popup">
-        <div class="confirmation-wrapper">
-            <div class="confirmation">
-                <h1>Thank you for your purchase!</h1>
-                <p>An email containing the details of this transaction will be sent in the email address you provided. Should you have any more concern, please email us <span>plantitaph@support.com</span></p>
-            </div>
-           <div class="btns">
-               <a href="#"><p>Go back to home</p></a>
-           </div>
-        </div>
-        <div class="img-wrapper2">
-            <img src="images/thankyou-bg.png" alt="plant leaves">
-        </div>
-    </div> -->
+    <script src="../navbar/app.js"></script>
     <script src="app.js"></script>
     <script>
         var x = window.matchMedia("(min-width: 1200px)")
