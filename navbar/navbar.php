@@ -21,7 +21,8 @@
             </div>
             <div class="cart">
                 <img src="../navbar/shopping-cart.png" alt="cart">
-                <p id="no-of-items">0</p>
+                <!-- NOTE: Dapat mag-update ni sa total count sa no of items sa user -->
+                <p id="no-of-items">5</p> 
             </div>
         </div>   
         <div class="inner-shell">
@@ -63,7 +64,8 @@
             </div>
             <div class="cart-inside">
                 <img src="../navbar/shopping-cart.png" alt="cart">
-                <p id="no-of-items">0</p>
+                <!-- NOTE: Diri mag-reflect sad/.  -->
+                <p id="no-of-items">5</p>
             </div>
         </div>
         <div class="shopping-cart">
@@ -77,12 +79,62 @@
             <div class="sc-middle-part">
                 <h1 class="sc-title">My Shopping Cart</h1>
                 <div class="shopping-cart-items">
+                    <!-- Diri mag-reflect ang mga items sa shopping cart sa user -->
                     <ul class="shopping-list">
+                        <!-- Template -->
+                        <li class = "sc-item">
+                            <div class="item-img">
+                            </div>
+                            <div class="item-info">
+                                <h1 class="item-name">Plant name</h1>
+                                <p class="item-classification">Classification</p>
+                                <p class="item-price">Price</p>
+                            </div>
+                        </li>
+                        <li class = "sc-item">
+                            <div class="item-img">
+                            </div>
+                            <div class="item-info">
+                                <h1 class="item-name">Plant name</h1>
+                                <p class="item-classification">Classification</p>
+                                <p class="item-price">Price</p>
+                            </div>
+                        </li>
+                        <li class = "sc-item">
+                            <div class="item-img">
+                            </div>
+                            <div class="item-info">
+                                <h1 class="item-name">Plant name</h1>
+                                <p class="item-classification">Classification</p>
+                                <p class="item-price">Price</p>
+                            </div>
+                        </li>
+                        <li class = "sc-item">
+                            <div class="item-img">
+                            </div>
+                            <div class="item-info">
+                                <h1 class="item-name">Plant name</h1>
+                                <p class="item-classification">Classification</p>
+                                <p class="item-price">Price</p>
+                            </div>
+                        </li>
+                        <li class = "sc-item">
+                            <div class="item-img">
+                            </div>
+                            <div class="item-info">
+                                <h1 class="item-name">Plant name</h1>
+                                <p class="item-classification">Classification</p>
+                                <p class="item-price">Price</p>
+                            </div>
+                        </li>
                     </ul>
+                </div>
+                <div class="call-to-action">
+                    <a href="../checkout-new/checkout.php">Proceed to checkout</a>
                 </div>
             </div>
             <div class="cart">
-                <!-- blank on purpose -->
+                <!-- Blank on purpose -->
             </div>
         </div>    
     </nav>
