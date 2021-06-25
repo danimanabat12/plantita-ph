@@ -90,6 +90,7 @@
                                 <p class="item-classification">Classification</p>
                                 <p class="item-price">Price</p>
                             </div>
+                            <button type="button" class="sc-remove-btn">x</button>  
                         </li>
                         <li class = "sc-item">
                             <div class="item-img">
@@ -99,6 +100,7 @@
                                 <p class="item-classification">Classification</p>
                                 <p class="item-price">Price</p>
                             </div>
+                            <button type="button" class="sc-remove-btn">x</button>  
                         </li>
                         <li class = "sc-item">
                             <div class="item-img">
@@ -108,6 +110,7 @@
                                 <p class="item-classification">Classification</p>
                                 <p class="item-price">Price</p>
                             </div>
+                            <button type="button" class="sc-remove-btn">x</button>  
                         </li>
                         <li class = "sc-item">
                             <div class="item-img">
@@ -117,6 +120,7 @@
                                 <p class="item-classification">Classification</p>
                                 <p class="item-price">Price</p>
                             </div>
+                            <button type="button" class="sc-remove-btn">x</button>  
                         </li>
                         <li class = "sc-item">
                             <div class="item-img">
@@ -126,6 +130,7 @@
                                 <p class="item-classification">Classification</p>
                                 <p class="item-price">Price</p>
                             </div>
+                            <button type="button" class="sc-remove-btn">x</button>  
                         </li>
                     </ul>
                 </div>
