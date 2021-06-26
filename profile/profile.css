@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap');
+
+:root {
+    --clr--main: #7d4f38; 
+    --clr--secondary: #164a41;
+    --clr--neutral: #000000;
+    --clr--white: #ffffff;
+    --clr--bg: #f3ebe1;
+    --clr--light-main: #c6a281;
+
+    --ff--main: 'Roboto', sans-serif; 
+    --ff--accent: 'Playfair Display', serif;
+}
+
+*,
+*::after, 
+*::before {
+    margin: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background-color: var(--clr--bg);
+}
+
+.container-wrapper {
+    position: relative;
+    max-width: 1920px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.sections {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+    z-index: -1;
+}
+
+nav {
+    z-index: 1;
+}
+
+
+.cart p { 
+    text-align: center;
+}
+
+/* Custom scrollbar */
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+  
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background:#f2f2f2;
+}
+   
+
+::-webkit-scrollbar-thumb {
+    background: var(--clr--main);
+    border-radius: 10px;
+  }
+  
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--clr--secondary); 
+  }
+
+/* Typography */
+
+section h1,
+section h2, 
+section h3 {
+    font-family: var(--ff--accent);
+    line-height: 1;
+    color: var(--clr--main);
+}
+
+section h1 {
+    font-size: 3.75em;
+    font-weight: 400;
+}
+
+section p, section a {
+    font-family: var(--ff--main);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+section img:not(.second-page-contents img) {
+    width: 100%;
+}   
+
+/* Fourth page */
+
+.fourth-page {
+    background-color: white;
+    /* border: 2px dotted green; */
+}
+
+.fourth-page-container {
+    padding: 3em 0;
+}
+
+.fourth-page-headline {
+    max-width: 38.875rem;
+    /* border: 1px solid; */
+    /* width: 35%; */
+    margin: 1rem auto;
+    padding: 0 1rem;
+}
+
+.fourth-page h1 {
+    color: var(--clr--secondary);
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 3.125rem;
+    text-align: center;
+}
+
+.fourth-page p {
+    font-family: var(--ff--main);
+    color: var(--clr--main);
+    font-size: 1.125rem;
+    margin-bottom: 3.125rem;
+    text-align: center;
+}
+
+input, label {
+    display: block;
+    font-family: Roboto; 
+    color: var(--clr--secondary);
+    margin-bottom: 1rem;
+
+}
+
+input[type="password"]{
+    border: 0; 
+    border-bottom: 1px solid #000000;
+    font-size: 1.25rem;
+    width: 100%;
+    outline: none;
+}
+
+/* input:focus {
+    outline: none;
+} */
+
+.fourth-page form {
+    margin-bottom: 3.125rem;
+}
+
+.fourth-page input[type="submit"] {
+    background-color: var(--clr--main);
+    font-family: var(--ff--main);
+    font-size: 0.9375rem;
+    color: var(--clr--bg);
+    max-width: 15em;
+    width: 15em;
+    margin: 0 auto;
+    padding: 1em;
+    border: none;
+    font-weight: 700;   
+}
+
+.fourth-page input[type="submit"]:hover {
+    background-color: var(--clr--secondary);
+    color: var(--clr--bg);
+    transition: .3s;
+}
+
+.fourth-page-headline ion-icon {
+    font-size: 72px;
+    color: var(--clr--main);
+}
+
+.fourth-page-img {
+    max-width: 35rem;
+    /* border: 1px solid; */
+    /* width: 35%; */
+    margin: 5rem 0;
+    padding: 0 1rem;
+}
+
+@media (min-width: 1000px) {
+    .fourth-page-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .fourth-page-headline h1, p {
+        text-align: left;
+    }
+
+    .fourth-page-headline {
+        margin: 1rem 0;
+    }
+
+    .fourth-page p{
+        text-align: left;
+    }
+
+    .fourth-page-img {
+        margin-bottom: 15rem;
+    }
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    background-color: #7d4f38;
+    padding: 6.25rem 0;
+    color: var(--clr--bg);
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 19.5625em; 
+    margin: 0 auto;
+}
+
+.footer-logo img{
+    max-width: 3.25em;
+}
+
+.footer-logo h2{
+    font-size: 1.5625rem;
+    color: var(--clr--bg);
+    margin-bottom: 1.5625rem;
+}
+
+.footer-socmeds i{
+    color: var(--clr--bg); 
+    margin: 0 1.25rem 1.5625rem 1.25rem;
+}
+
+.footer-socmeds i:hover {
+    color: var(--clr--light-main);
+}
+
+.copyright p{
+    text-align: center;
+}
+
+@media (min-width: 800px) {
+    footer {
+        padding: 6.25rem 0 6.25rem 6.375rem;
+    }
+}
