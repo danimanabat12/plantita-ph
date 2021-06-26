@@ -14,7 +14,7 @@ const navSlide = () => {
         nav.classList.add('inner-shell-active');
 
         navLinks.forEach((link, index) => {
-            link.style.animation = `navLinkFade 0.4s ease forwards ${index / 5 + 0.3}s`;
+            link.style.animation = `navLinkFade 0.3s ease forwards ${index/20}s`;
         })
     })
 

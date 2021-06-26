@@ -41,7 +41,7 @@
                         <h1><a href="../about-us/aboutus.php">about</a></h1>
                     </li>
                     <li>
-                        <h1><a href="../filler-page/404page.php">guides</a></h1>
+                        <h1><a href="../filler-page/404page.php">profile</a></h1>
                     </li>
                     <li class="sublinks">
                         <p><a href="../signup-login/login.php">sign in</a></p>

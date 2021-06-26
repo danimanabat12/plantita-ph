@@ -113,10 +113,12 @@ nav a {
 }
 
 .catalogue-container p {
-    margin-left: 2rem;
+    margin-left: 1rem;
 }
 
 .catalogue-links { 
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     max-height: 4rem;
     display: flex;
     flex-direction: column;
