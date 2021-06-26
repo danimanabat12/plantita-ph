@@ -1,5 +1,15 @@
 
     <nav>
+        <!-- Changes na gibuhat -->
+        <div class="user-shell">
+            <div class="user-details">
+                <p>Hello,</p>
+                <h3>username</h3>
+            </div>
+            <div class="user-profile-shortcut">
+                <a href="#"><img src="../navbar/profile-logo.svg" alt="profile- icon"></a>
+            </div>
+        </div>
         <div class="outer-shell">
             <div class="logo">
                 <a href="../homepage/index.php"><img src="../navbar/nav-logo.svg" alt="logo"></a>
@@ -83,7 +93,7 @@
                             </div>
                             <div class="item-info">
                                 <div class="ii-top-part">
-                                    <h1 class="item-name">Plant name</h1>
+                                    <a href=""><h1 class="item-name">Plant name</h1></a>
                                     <p class="item-classification">Classification</p>
                                     <p class="item-price">Price</p>
                                 </div>
@@ -103,7 +113,7 @@
                             </div>
                             <div class="item-info">
                                 <div class="ii-top-part">
-                                    <h1 class="item-name">Plant name</h1>
+                                    <a href=""><h1 class="item-name">Plant name</h1></a>
                                     <p class="item-classification">Classification</p>
                                     <p class="item-price">Price</p>
                                 </div>
@@ -123,7 +133,7 @@
                             </div>
                             <div class="item-info">
                                 <div class="ii-top-part">
-                                    <h1 class="item-name">Plant name</h1>
+                                    <a href=""><h1 class="item-name">Plant name</h1></a>
                                     <p class="item-classification">Classification</p>
                                     <p class="item-price">Price</p>
                                 </div>
@@ -143,7 +153,7 @@
                             </div>
                             <div class="item-info">
                                 <div class="ii-top-part">
-                                    <h1 class="item-name">Plant name</h1>
+                                <a href=""><h1 class="item-name">Plant name</h1></a>
                                     <p class="item-classification">Classification</p>
                                     <p class="item-price">Price</p>
                                 </div>
@@ -163,7 +173,7 @@
                             </div>
                             <div class="item-info">
                                 <div class="ii-top-part">
-                                    <h1 class="item-name">Plant name</h1>
+                                    <a href=""><h1 class="item-name">Plant name</h1></a>
                                     <p class="item-classification">Classification</p>
                                     <p class="item-price">Price</p>
                                 </div>

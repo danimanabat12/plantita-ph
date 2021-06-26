@@ -42,7 +42,7 @@
                 <div class="second-page-contents">
                     <p class="title-second-page">ALL ARTICLES</p>
                     <div class="articles-slide">
-                        <a href="../filler_page/404page.php">
+                        <a href="../filler-page/404page.php">
                             <div class="article-1 articles">
                                 <p class="title-top">1</p>
                                 <img src="images/image-1.png" alt="article-1-image" class="top-image">
@@ -51,7 +51,7 @@
                                 <p class="date-time">July 2020</p>
                             </div>
                         </a>
-                        <a href="../filler_page/404page.php">
+                        <a href="../filler-page/404page.php">
                             <div class="article-2 articles">
                                 <p class="title-top">2</p>
                                 <img src="images/image-2.png" alt="article-2-image" class="top-image">
@@ -60,7 +60,7 @@
                                 <p class="date-time">April 2021</p>
                             </div>
                         </a>
-                        <a href="../filler_page/404page.php">
+                        <a href="../filler-page/404page.php">
                             <div class="article-3 articles">
                                 <p class="title-top">3</p>
                                 <img src="images/image-3.png" alt="article-3-image" class="top-image">
@@ -69,7 +69,7 @@
                                 <p class="date-time">March 2021</p>
                             </div>
                         </a>
-                       <a href="../filler_page/404page.php">
+                       <a href="../filler-page/404page.php">
                             <div class="article-4 articles">
                                 <p class="title-top">4</p>
                                 <img src="images/image-4.png" alt="article-4-image" class="top-image">
@@ -78,7 +78,7 @@
                                 <p class="date-time">December 2020</p>
                             </div>
                        </a>
-                       <a href="../filler_page/404page.php">
+                       <a href="../filler-page/404page.php">
                             <div class="article-5 articles">
                                 <p class="title-top">5</p>
                                 <img src="images/image-2.png" alt="article-2-image" class="top-image">

@@ -144,6 +144,10 @@ section img:not(.second-page-contents img) {
     color: var(--clr--bg);
 }
 
+.hero-headlines h1 {
+    font-style: italic;
+}
+
 .hero-headlines span {
     font-weight: bold;
     line-height: 1.6;

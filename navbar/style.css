@@ -32,6 +32,60 @@ nav a {
     color: #7d4f38;
 }
 
+.user-shell{
+    /* Dapat pag naka-login na ang user, mawala ning visibility */
+    visibility: hidden;
+    position: fixed;
+    height: 5rem;
+    width: 14.375rem;
+    background-color: var(--clr--white);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    left: 7.375rem;
+    top: 2rem;
+    display: flex;
+    opacity: 50%;
+    transition: 0.5s;
+}
+
+.user-shell:hover {
+    opacity: 100%;
+}
+
+.user-profile-shortcut {
+    width: 30%;
+    border-left: 2px solid;
+    border-color: var(--clr--secondary);
+    display: grid; 
+    place-content: center;
+    transition: 0.5s;
+}
+
+.user-profile-shortcut:hover {
+    background-color: #164a41;
+    border-radius: 0 10px 10px 0;
+}
+
+.user-profile-shortcut:hover img {
+    filter: invert(91%) sepia(92%) saturate(22%) hue-rotate(251deg) brightness(106%) contrast(100%);
+}
+
+.user-details {
+    width: 70%;
+    color: var(--clr--secondary);
+    font-family: var(--ff--main);
+    margin: auto 0 auto 1.25rem;
+}
+
+.user-details p {
+    font-size: 12px;
+    font-style: italic;
+}
+
+.user-details h3 {
+    font-size: 20px;
+}
+
 .inner-shell {
     visibility: hidden;
     position: fixed;
@@ -310,6 +364,10 @@ nav a {
     font-size: 1.563rem;
 }
 
+.item-name:hover {
+    border-bottom: 1px solid;
+}
+
 .item-classification {
     color: var(--clr--main);
 }
@@ -411,7 +469,6 @@ button.sc-remove-btn:hover {
 
 nav {
     height: 100vh;
-    display: flex;
 }
 
 
@@ -427,12 +484,20 @@ nav {
 }
 
 @media screen and (max-width: 800px) {
+    .user-shell {
+        left: 1.5rem;
+    }
     .outer-shell {
         height: auto;
         width: fit-content;
         right: 1.5rem;
-        top: 1.5rem;
+        top: 2rem;
         background-color: white;
+        opacity: 50%;
+        transition: 0.5s;
+    }
+    .outer-shell:hover {
+        opacity: 100%;
     }
     .outer-shell .logo, .outer-shell .cart {
         display: none;
