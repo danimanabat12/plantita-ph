@@ -64,7 +64,7 @@
                         <div class="team-4 team">
                             <img src="images/ron.jpg" alt="ron" class="top-image">
                             <h2 class="team-name">Ron Bryan M. Vertudes</h2>
-                            <p class="position">Chief of Staff Office of the CEO</p>
+                            <p class="position">Chief of Staff Office of the CEO<br>   </p>
                         </div>
                     </div>
                 </div>

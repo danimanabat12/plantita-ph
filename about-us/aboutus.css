@@ -256,7 +256,6 @@ li .fa-facebook, li .fa-instagram {
     /* border: 1px solid magenta; */
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
 }
 
@@ -266,8 +265,10 @@ li .fa-facebook, li .fa-instagram {
 }
 
 .team-name {
+    margin-top: 1rem;
     font-size: 1.875rem;
     font-weight: 400;
+    text-align:center
 }
 
 .view-plant-action {
@@ -283,7 +284,9 @@ a.view-plant-action:hover {
 }
 
 .position {
+    margin-top: 1rem;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .third-page-bg img{

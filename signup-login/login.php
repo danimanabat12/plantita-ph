@@ -10,11 +10,11 @@
   <body>
     <div class="split-screen">
       <div class="right">
-        <a class="title"  href="../homepage/index.html">Plantita.ph</a>
+        <a class="title"  href="../homepage/index.php">Plantita.ph</a>
         <form action="">
           <section class="copy">
             <h2>Log in</h2>
-            <p>Don't have an account yet? <a href="signup.html">Sign up</a></p>
+            <p>Don't have an account yet? <a href="signup.php">Sign up</a></p>
             <div class="social-media">
               <a class="social-icon" href="google.com">
                 <img src="images/google-logo.svg" alt="" />

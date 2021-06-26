@@ -13,11 +13,11 @@
         <section class="copy"></section>
       </div>
       <div class="right">
-        <a class="title"  href="../homepage/index.html">Plantita.ph</a>
+        <a class="title"  href="../homepage/index.php">Plantita.ph</a>
         <form action="">
           <section class="copy">
             <h2>Sign up</h2>
-            <p>Already have an account? <a href="login.html">Log in</a></p>
+            <p>Already have an account? <a href="login.php">Log in</a></p>
             <div class="social-media">
               <a class="social-icon" href="google.com">
                 <img src="images/google-logo.svg" alt="" />
