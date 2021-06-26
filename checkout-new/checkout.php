@@ -7,8 +7,8 @@
     <title>Checkout | Plantita ph</title>
     <script src="https://kit.fontawesome.com/6f5f971efa.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="../navbar/style.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../navbar/style.css">
 </head>
 <body>
     <div class="container-wrapper">
@@ -18,7 +18,6 @@
         <div class="sections">
             <div class="hero">
                 <div class="super-center">
-                    <!-- Naa ni background picture -->
                     <h1>Checkout</h1>
                     <h3>confirm & pay</h3>
                 </div>
@@ -49,17 +48,25 @@
                                             <div class="remove-btn" data-itemID="item1">
                                                 <button>x</button>
                                             </div>
+                                            <img src="" alt="item image">
                                         </div>
-                                        <div class="item-info">
-                                            <div class="info-top-part">
-                                                <h1 class="item-name">Astrophytum</h1>
-                                                <p class="item-price">Price</p>
+                                        <div class="os-item-info">
+                                            <div class="item-upper">
+                                                <div class="info-top-part">
+                                                    <h1 class="item-name">Astrophytum</h1>
+                                                    <p class="item-price">Original Price</p>
+                                                </div>
+                                                <div class="info-bottom-part">
+                                                    <button type="button" class="item-decrease">-</button>
+                                                    <p class="item-qty">1</p>
+                                                    <button type="button" class="item-increase">+</button>
+                                                </div>
                                             </div>
-                                            <div class="info-bottom-part">
-                                                <button type="button" class="item-decrease">-</button>
-                                                <p class="item-qty">1</p>
-                                                <button type="button" class="item-increase">+</button>
-                                            </div>
+                                           <div class="item-lower">
+                                                <div class="info-total-price">
+                                                    <p>Php.69.00</p> 
+                                                </div>
+                                           </div>
                                         </div>
                                     </li>
                                     <li class="sc-item">
@@ -67,17 +74,51 @@
                                             <div class="remove-btn" data-itemID="item2">
                                                 <button>x</button>
                                             </div>
+                                            <img src="" alt="item image">
                                         </div>
-                                        <div class="item-info">
-                                            <div class="info-top-part">
-                                                <h1 class="item-name">Astrophytum</h1>
-                                                <p class="item-price">Price</p>
+                                        <div class="os-item-info">
+                                            <div class="item-upper">
+                                                <div class="info-top-part">
+                                                    <h1 class="item-name">Astrophytum</h1>
+                                                    <p class="item-price">Original Price</p>
+                                                </div>
+                                                <div class="info-bottom-part">
+                                                    <button type="button" class="item-decrease">-</button>
+                                                    <p class="item-qty">1</p>
+                                                    <button type="button" class="item-increase">+</button>
+                                                </div>
                                             </div>
-                                            <div class="info-bottom-part">
-                                                <button type="button" class="item-decrease">-</button>
-                                                <p class="item-qty">1</p>
-                                                <button type="button" class="item-increase">+</button>
+                                           <div class="item-lower">
+                                                <div class="info-total-price">
+                                                    <p>Php.69.00</p> 
+                                                </div>
+                                           </div>
+                                        </div>
+                                    </li>
+                                    <li class="sc-item">
+                                        <div class="item-img">
+                                            <div class="remove-btn" data-itemID="item2">
+                                                <button>x</button>
                                             </div>
+                                            <img src="" alt="item image">
+                                        </div>
+                                        <div class="os-item-info">
+                                            <div class="item-upper">
+                                                <div class="info-top-part">
+                                                    <h1 class="item-name">Astrophytum</h1>
+                                                    <p class="item-price">Original Price</p>
+                                                </div>
+                                                <div class="info-bottom-part">
+                                                    <button type="button" class="item-decrease">-</button>
+                                                    <p class="item-qty">1</p>
+                                                    <button type="button" class="item-increase">+</button>
+                                                </div>
+                                            </div>
+                                           <div class="item-lower">
+                                                <div class="info-total-price">
+                                                    <p>Php.69.00</p> 
+                                                </div>
+                                           </div>
                                         </div>
                                     </li>
                                 </ul>
@@ -85,9 +126,16 @@
                         </div>
                         <div class="last-part-os">
                             <div class="payment-summary-os">
-                                <p class="subtotal">Subtotal: <span class="show-tot"></span></p>
-                                <p class="shipping-fee">Shipping: <span class="show-tot"></span></p>
-                                <p class="total">TOTAL: <span class="show-tot"></span></p>
+                                <span class="ps-left">Subtotal:</span>
+                                <span class="ps-right ps-subtotal">Php. 207.00</span>
+                            </div>
+                            <div class="payment-summary-os">
+                                <span class="ps-left">Shipping: </span>
+                                <span class="ps-right ps-shipping">Php. 150.00</span>
+                            </div>
+                            <div class="payment-summary-os last-pso">
+                                <span class="ps-left">TOTAL:</span>
+                                <span class="ps-right ps-cummulative">Php. 357.00</span>
                             </div>
                         </div>
                     </div>

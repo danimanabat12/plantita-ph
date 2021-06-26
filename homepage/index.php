@@ -169,8 +169,6 @@
         </div>  
         
     </div>
-   
-
     <script src="../navbar/app.js"></script>
 </body>
 </html>

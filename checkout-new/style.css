@@ -2,10 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;700&display=swap');
 
 /* Already defined the default CSS on the nav-bar css */
-* {
+*,
+*::after, 
+*::before {
+    margin: 0; 
     box-sizing: border-box;
-    padding: 0px;
 }
+
 
 :root {
     --clr--main: #7d4f38; 
@@ -406,7 +409,6 @@ input, textarea {
     transition: transform 0.5s ease;
     display: grid;
     place-content: center;
-    padding: 1rem;
 }
 .inner-shell-os-active {
     transform: translateY(0%);
@@ -433,7 +435,6 @@ nav {
 }
 .top-part-os img {
     width: 5rem;
-    border: 1px dotted;
     border-color: var(--clr--secondary);
     border-radius: 40px;
 }
@@ -441,12 +442,12 @@ nav {
 .middle-part-os {
     margin: 0 auto;
     width: 100%;
-    max-width: 800px;
+    max-width: 700px;
     max-height: 50vh;
     border-color: var(--clr--secondary);
     border-radius: 10px;
-    padding: 0 1rem;
 }
+
 .os-title {
     margin: 0 auto;
     width: fit-content;
@@ -457,8 +458,12 @@ nav {
 }
 
 .last-part-os {
-    width: fit-content;
-    margin: 2.5rem 0 0 0 ;
+    /* width: fit-content; */
+    border-top: 1px solid;
+    margin: 2rem 0 0 0 ;
+    display: flex;
+    flex-direction: column;
+    margin-right: 0.5rem;
 }
 
 .total {
@@ -468,17 +473,33 @@ nav {
 
 .order-summary-items {
     width: 100%;
-    max-width: 30rem;
-    height: 40vh;
-    overflow-y: scroll;
+    max-height: 40vh;
+    overflow-y: auto;
     margin-top: 1.5rem;
 }
 
 .payment-summary-os {
+    display: block;
     font-family: var(--ff--main);
-    font-weight: bold; 
+    /* font-weight: bold;  */
     color: var(--clr--main);
+    width: 100%;
 }
+
+.ps-left {
+    float: left;
+}
+
+.ps-right { 
+    float: right;
+    color: var(--clr--secondary);
+}
+
+.last-pso { 
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
 
 .show-tot {
     color: var(--clr--secondary);
@@ -668,10 +689,11 @@ nav {
 /* Items style */
 .order-list {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     /* height: auto; */
     justify-content: space-between;
-    flex-wrap: wrap;
+    width: 100%;
+    padding-left: 0;
 }
 
 .order-list li {
@@ -680,18 +702,20 @@ nav {
 
 .sc-item {
     display: flex;
-    align-items: center;
     font-family: var(--ff--main);
-    width: fit-content;
+    width: 100%;
 }
 
 .item-img {
+    display: flex;
     position: relative;
-    width: 7rem; 
-    height: 7rem; 
+    width: 100%;
+    min-width: 8rem;
+    max-width: 8rem;
+    min-height: 8rem; 
+    max-height: 8rem; 
     background-color: #f2f2f2;
     border-radius: 10px;
-    margin-right: 2rem;
 }
 
 .item-name {
@@ -711,19 +735,26 @@ nav {
     color: var(--clr--light-main);
 }
 
-.item-info {
+.os-item-info {
+    position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     color: var(--clr--main);
+    width: 100%;
+    margin-right: 1rem;
 }
 
-.item-info button {
+.os-item-info button {
     color: var(--clr--main);
 }
 
 .info-bottom-part {
     width: 100%;
     display: flex;
+}
+
+.item-upper {
+    margin-right: 2rem;
 }
 
 .item-increase, .item-decrease {
@@ -733,6 +764,12 @@ nav {
     border: 1px solid;
     font-size: 1rem;
     border-radius: 0;
+    transition: 0.3s;
+}
+
+.item-increase:hover, .item-decrease:hover {
+    background-color: var(--clr--main);
+    color: var(--clr--bg);
 }
 .item-qty {
     width: 2rem;
@@ -745,6 +782,13 @@ nav {
 
 .info-bottom-part {
     margin-top: 1rem;
+}
+
+.info-total-price {
+    right: 0;
+    margin-top: 5px;
+    color: var(--clr--light-main);
+    font-weight: bold;
 }
 
 .remove-btn {
@@ -764,7 +808,7 @@ nav {
     font-size: 0.75rem;
     font-weight: bold;
     position: absolute;
-    right: 0;
+    left: 0;
     transition: 0.3s;
 }
 
