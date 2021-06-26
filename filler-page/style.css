@@ -38,9 +38,7 @@
   ::-webkit-scrollbar-thumb:hover {
     background: var(--clr--secondary); 
   }
-nav {
-    z-index: 2;
-}
+
 
 .main-content-container {
     position: relative;
@@ -48,6 +46,7 @@ nav {
     display: grid; 
     place-content: center;
     z-index: 0;
+    height: 100vh;
 }
 
 .main-content-container img {
@@ -61,9 +60,10 @@ nav {
     right: 0;
 }
 
-.container {
+.container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .main-content h1 {
@@ -134,12 +134,6 @@ nav {
     transition: 0.3s;
 }
 
-@media screen and (min-width: 800px) {
-    .main-content-container {
-        margin-left: 6.375rem;
-    }
-    
-}
 
 /* Footer */
 

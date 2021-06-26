@@ -33,7 +33,6 @@ nav a {
 }
 
 .user-shell{
-    /* Dapat pag naka-login na ang user, mawala ning visibility */
     visibility: hidden;
     position: fixed;
     height: 5rem;
@@ -198,6 +197,18 @@ nav a {
 .inner-shell-active {
     transform: translateX(0%);
 }
+
+.section-block {
+    pointer-events: none; 
+    opacity: 50%;
+}
+
+.section-neutral {
+    pointer-events: all;
+    opacity: 100%;
+    overflow-y: hidden;
+}
+
 
 .inner-shell .cart-inside, .shopping-cart .cart-inside {
     text-align: right;
@@ -521,4 +532,3 @@ nav {
         padding-top: 2.5rem;
     }
 }
-

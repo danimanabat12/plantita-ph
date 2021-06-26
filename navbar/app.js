@@ -8,9 +8,11 @@ const navSlide = () => {
     const cart = document.querySelector('.cart img');
     const close = document.querySelector('.closing-btn');
     const cart_inside = document.querySelector('.cart-inside');
+    const sections = document.querySelector('.sections');
 
     burger1.addEventListener('click', ()=> {
         nav.style.visibility = 'unset';
+        sections.classList.add('section-block');
         nav.classList.add('inner-shell-active');
 
         navLinks.forEach((link, index) => {
@@ -19,7 +21,8 @@ const navSlide = () => {
     })
 
     burger2.addEventListener('click', ()=> {
-        nav.classList.remove('inner-shell-active');
+        sections.classList.remove('section-block');
+        nav.classList.remove('inner-shell-active'); 
         navLinks.forEach((link, index) => {
             link.style.animation = '';      
         })
@@ -33,6 +36,7 @@ const navSlide = () => {
     cart.addEventListener('click', ()=> {
         shopping_cart.style.visibility = 'unset';
         shopping_cart.classList.add('shopping-cart-active');
+        sections.classList.add('section-block');
         sc_middle_part.forEach((link, index) => {
             link.style.animation = `navLinkFade 0.4s ease forwards ${index / 5 + 0.3}s`;      
         })
@@ -41,6 +45,7 @@ const navSlide = () => {
     cart_inside.addEventListener('click', ()=> {
         shopping_cart.style.visibility = 'unset';
         shopping_cart.classList.add('shopping-cart-active');
+        sections.classList.add('section-block');
         sc_middle_part.forEach((link, index) => {
             link.style.animation = `navLinkFade 0.4s ease forwards ${index / 5 + 0.3}s`;      
         })
@@ -48,6 +53,7 @@ const navSlide = () => {
 
     close.addEventListener('click', () => {
         shopping_cart.classList.remove('shopping-cart-active');
+        sections.classList.remove('section-block');
         sc_middle_part.forEach((link, index) => {
             link.style.animation = '';      
         })

@@ -1,4 +1,3 @@
-
     <nav>
         <!-- Changes na gibuhat -->
         <?php
@@ -67,7 +66,7 @@
                     <li class="sublinks">
                         <p><a href="../signup-login/login.php">sign in</a></p>
                         <p><a href="../contact-us/contact.php">contact us</a></p>
-                        <p><a href="../filler-page/404p age.php">policies</a></p>
+                        <p><a href="../filler-page/404page.php">policies</a></p>
                         <p><a href="../filler-page/404page.php">help</a></p>
                     </li>
                 </ul>
