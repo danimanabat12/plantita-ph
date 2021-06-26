@@ -2,13 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;700&display=swap');
 
 /* Already defined the default CSS on the nav-bar css */
-*,
-*::after, 
-*::before {
-    margin: 0; 
+* {
     box-sizing: border-box;
+    padding: 0px;
 }
-
 
 :root {
     --clr--main: #7d4f38; 
@@ -34,7 +31,7 @@
    
 
 ::-webkit-scrollbar-thumb {
-    background: var(--clr--secondary); 
+    background: var(--clr--main); 
     border-radius: 10px;
   }
   
@@ -57,6 +54,7 @@ body {
     height: auto;
     font-family: var(--ff--main);
     color: var(--clr--main);
+    background-image: url('images/bg.png');
 }
 
 /* ====pre-styling==== */
@@ -73,14 +71,13 @@ body {
 }
 
 .sections h2 {
-    font-size: 2rem;
+    font-size: 1.5625rem;
+    /* font-weight: bold; */
 }
 
 .sp-title p {
     font-size: 1rem;
     color: var(--clr--secondary);
-    text-decoration: underline;
-    /* font-weight: bold; */
 }
 
 input, label, textarea {
@@ -93,22 +90,40 @@ input, textarea {
     border-bottom: 1px solid;
     margin-bottom: 1.5rem;
     width: 100%;
-    max-width: 35rem;
+    font-family: var(--ff--main);
+    color: var(--clr--main);
+    padding-left: 3px;
+    padding-top: 3px;
 }
 
 input {
     height: 3.125rem;
 }
 
-textarea {
-    margin-top: 0.5rem;
-    height: 5rem;
-}
-
 input:focus, textarea:focus {
     outline: none;
 }
 
+input::placeholder, textarea::placeholder {
+    font-family: var(--ff--main);
+    font-weight: 400; 
+    font-size: 1rem;
+    color: var(--clr--main);
+}
+
+input:focus::placeholder, textarea:focus::placeholder {
+    color: transparent;
+    transition: 0.3s;
+}
+
+textarea:focus {
+    height: 200px;
+}
+
+textarea {
+    margin-top: 2.5rem;
+    max-height: 200px;
+}
 
 .btn-solid {
     max-width: 10rem;
@@ -117,7 +132,6 @@ input:focus, textarea:focus {
     color: var(--clr--main);
     font-weight: bold;
     font-family: var(--ff--main);
-    background-color: white;
     border-color: var(--clr--main);
     border: 1px solid;
     transition: 0.5s;  
@@ -130,22 +144,18 @@ input:focus, textarea:focus {
     background-color: var(--clr--main);
 }
 
-
-
 /* ====formatting===== */
 .main-content-container {
-    max-width: 35rem;
+    max-width: 56.25rem;
     margin: 3.5rem auto;
     padding: 3rem 1rem;
-    border: 1px solid;
+    background-color: var(--clr--white);
 }
 .second-part {
     display: flex;
     flex-direction: column;
     width: 100%; 
-    max-width: 35rem;
     justify-content: space-between;
-    border: 1px solid;
     margin-bottom: 3rem;
 }
 .sp-title { 
@@ -160,11 +170,24 @@ input:focus, textarea:focus {
     margin-bottom: 0.5rem;
 }
 
-
-form {
-    margin-top: 1.5rem;
+.third-part {
+    margin: 0 auto;
 }
 
+.third-part h1{
+    font-size: 1.5625rem;
+    text-decoration: underline;
+}
+
+form {
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    max-width: 40.625rem;
+}
+
+.input-full-active {
+    height: 200px;
+}
 
 /* ====for footer==== */
 footer {
