@@ -2,18 +2,19 @@
     <nav>
         <!-- Changes na gibuhat -->
         <?php
-            if(isset($_SESSION['username'])){
-                echo '<style type="text/css">
+            if(isset($_SESSION['username'])){    //checks if the user is signed in
+                echo '<style type="text/css">    
                     .user-shell {
                         visibility: unset;
                     }
-                </style>';
+                </style>';                       //removes the visibility:hidden sa style sa user-shell sa css
             }
         ?>
         <div class="user-shell">
             <div class="user-details">
                 <p>Hello,</p>
-                <h3><?php echo $_SESSION['username']?></h3>
+                <!-- I-call niya ang user-name from DB-->
+                <h3><?php echo $_SESSION['username']?></h3> 
             </div>
             <div class="user-profile-shortcut">
                 <a href="#"><img src="../navbar/profile-logo.svg" alt="profile- icon"></a>
