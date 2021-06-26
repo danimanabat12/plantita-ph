@@ -47,12 +47,12 @@
                     <div class="team-content">
                     <!--insert img src for your pictures-->
                         <div class="team-1 team">
-                            <img src="# alt="junniel" class="top-image">
+                            <img src="images/junyel.jpg" alt="junniel" class="top-image">
                             <h2 class="team-name">Junniel Rome A. Ardepuela</h2>
                             <p class="position">President <br> Chief Executive Officer</p>
                         </div>
                         <div class="team-2 team">
-                            <img src="#" alt="dani" class="top-image">
+                            <img src="images/dani.jpg" alt="dani" class="top-image">
                             <h2 class="team-name">Daniel Gabriel S. Manabat</h2>
                             <p class="position">Chief Operating Officer <br> Chief Financial Officer</p>
                         </div>
@@ -62,7 +62,7 @@
                             <p class="position">Senior Vice President<br> Customer Experience</p>
                         </div>
                         <div class="team-4 team">
-                            <img src="#" alt="ron" class="top-image">
+                            <img src="images/ron.jpg" alt="ron" class="top-image">
                             <h2 class="team-name">Ron Bryan M. Vertudes</h2>
                             <p class="position">Chief of Staff Office of the CEO</p>
                         </div>
