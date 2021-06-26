@@ -1,15 +1,25 @@
 
     <nav>
         <!-- Changes na gibuhat -->
+        <?php
+            if(isset($_SESSION['username'])){
+                echo '<style type="text/css">
+                    .user-shell {
+                        visibility: unset;
+                    }
+                </style>';
+            }
+        ?>
         <div class="user-shell">
             <div class="user-details">
                 <p>Hello,</p>
-                <h3>username</h3>
+                <h3><?php echo $_SESSION['username']?></h3>
             </div>
             <div class="user-profile-shortcut">
                 <a href="#"><img src="../navbar/profile-logo.svg" alt="profile- icon"></a>
             </div>
         </div>
+        
         <div class="outer-shell">
             <div class="logo">
                 <a href="../homepage/index.php"><img src="../navbar/nav-logo.svg" alt="logo"></a>
