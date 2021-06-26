@@ -115,15 +115,12 @@
                             <input type="text" name="name" id="cntct-name" placeholder="Name" required>
                         </div>
                         <div class="style-input">
-                            <!-- <label for="email">Email</label> -->
                             <input type="email" name="email" id="cntct-email" placeholder="Email" required>
                         </div>
                         <div class="style-input">
-                            <!-- <label for="message">Message</label> -->
                             <textarea name="message" id="cntct-message" placeholder="Message" class="input-full" required></textarea>
                         </div>
                         <input name="submit" type="submit" value="Submit" class="btn-solid">
-                        <!-- <button  name="submit"  type="submit" class="btn-solid">Submit</button> -->
                     </form>
                 </div>
             </div>
