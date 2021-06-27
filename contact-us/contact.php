@@ -104,8 +104,8 @@
                         <p>hello@plantita.ph</p>
                     </div>
                     <div class="sp-title">
-                        <h2>General Inquiries</h2>
-                        <p>hello@plantita.ph</p>
+                        <h2>Site Inquiries</h2>
+                        <p>devs@plantita.ph</p>
                     </div>
                 </div>
                 <div class="third-part">
