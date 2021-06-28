@@ -4,24 +4,58 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign up</title>
+    <title>Log In | Plantita ph</title>
     <link rel="stylesheet" href="style.css" />
+    <?php
+				//start the connection of the server
+        include('../config/db.php');
+
+        session_start(); //start the session of the server
+				
+        //muandar ni kaso walay checking maot
+        //if the user submits the form
+				if(isset($_POST["login"])){
+          $myusername = mysqli_real_escape_string($conn, $_POST['username']);
+          $mypassword = mysqli_real_escape_string($conn, $_POST['password']);
+					
+            //select the data from table
+				   $sql = "SELECT * FROM users WHERE username='$myusername' and password='$mypassword'";
+           //store the result from the query we have made
+           $result = mysqli_query($conn, $sql);
+           $check = mysqli_fetch_assoc($result);
+           
+					if (mysqli_num_rows($result) > 0) {
+            $mypassword = mysqli_num_rows($result);
+              if($mypassword == true){
+                $_SESSION['username'] = $myusername;
+                $_SESSION['user_id'] = $check["id"];
+                header('location: ../homepage/index.php');
+              }
+              else if($mypassword == false){
+                $message =  'Invalid password!';
+              }   
+					  }
+            else{
+					    $message =  'Account is not registered.';
+					}
+				}
+			?>
   </head>
   <body>
     <div class="split-screen">
       <div class="right">
         <a class="title"  href="../homepage/index.php">Plantita.ph</a>
-        <form action="">
+        <form action="" method="POST">
           <section class="copy">
             <h2>Log in</h2>
             <p>Don't have an account yet? <a href="signup.php">Sign up</a></p>
             <div class="social-media">
-              <a class="social-icon" href="google.com">
+              <a class="social-icon" href="https://www.google.com">
                 <img src="images/google-logo.svg" alt="" />
                 Log in with Google
               </a>
               <a class="social-icon" href="facebook.com">
-                <img src="images/facebook-logo.svg" alt="facebook.com" />
+                <img src="images/facebook-logo.svg" alt="https://www.facebook.com" />
                 Log in with Facebook
               </a>
             </div>
@@ -30,6 +64,11 @@
               <p>or</p>
               <div class="line 2"></div>
             </div>
+            <?php 
+              if(isset($message)){
+                echo  "<div style= 'color: red;' class='alert alert-danger'>".$message. "</div>";
+              }
+            ?>
           </section>
           <div class="input-container name">
             <label for="username">Username</label>
@@ -47,7 +86,7 @@
             <img class="input-icon" src="Images/lock-icon.svg" alt="" />
             <a onclick="showLetters()"><img class="show-btn" src="Images/eye-icon.svg" alt="" /></a>
           </div>
-          <button class="signup-btn" type="submit">Login</button>
+          <button class="signup-btn" name ="login" type="submit">Login</button>
         </form>
       </div>
       

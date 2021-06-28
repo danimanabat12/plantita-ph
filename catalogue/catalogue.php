@@ -8,86 +8,13 @@
     <title>Catalogue | Plantita ph</title>
     <link rel="stylesheet" href="../navbar/style.css">
     <link rel="stylesheet" href="style.css">
+    <?php 
+        session_start();
+        include('../config/db.php'); 
+    ?>
 </head>
 <body>
     <div class="container-wrapper">
-        <!---navbar--->
-        <!-- <nav>
-            <div class="outer-shell">
-                <div class="logo">
-                    <a href="#"><img src="img/nav-logo.svg" alt="logo"></a>
-                </div>     
-                <div class="burger">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
-                <div class="cart">
-                    <img src="img/shopping-cart.png" alt="cart">
-                    <p id="no-of-items">0</p>
-                </div>
-            </div>   
-            <div class="inner-shell">
-                <div class="top-part">
-                    <div class="logo2">
-                        <img src="img/nav-logo.svg" alt="logo">
-                        <p><a href="#">Plantita.ph</a></p>
-                    </div>
-                </div>
-                <div class="middle-part">
-                    <ul class="nav-links">
-                        <li>
-                            <h1 class="current"><a href="#">home</a></h1>
-                        </li>
-                        <li class="catalogue-container">
-                            <h1><a href="catalogue.php">catalogue</a></h1>
-                            <p><a href="sort/homeplant.php">homeplants</a></p>
-                            <p><a href="sort/outdoor.php">outdoor plants</a></p>   
-                            <p><a href="sort/succulent.php">succulents</a></p>
-                        </li>
-                        <li>
-                            <h1><a href="#">about</a></h1>
-                        </li>
-                        <li>
-                            <h1><a href="#">guides</a></h1>
-                        </li>
-                        <li class="sublinks">
-                            <p><a href="#">sign in</a></p>
-                            <p><a href="#">contact us</a></p>
-                            <p><a href="#">policies</a></p>
-                            <p><a href="#">help</a></p>
-                        </li>
-                    </ul>
-                    <div class="burger-inside">
-                        <div class="line1"></div>
-                        <div class="line2"></div>
-                        <div class="line3"></div>
-                    </div>
-                </div>
-                <div class="cart-inside">
-                    <img src="img/shopping-cart.png" alt="cart">
-                    <p id="no-of-items">0</p>
-                </div>
-            </div>
-            <div class="shopping-cart">
-                <div class="top-part">
-                    <div class="logo2">
-                        <img src="img/nav-logo.svg" alt="logo">
-                        <p><a href="#">Plantita.ph</a></p>
-                    </div>
-                    <p class="closing-btn">close</p>
-                </div>
-                <div class="sc-middle-part">
-                    <h1 class="sc-title">My Shopping Cart</h1>
-                    <div class="shopping-cart-items">
-                        <ul class="shopping-list">
-                        </ul>
-                    </div>
-                </div>
-                <div class="cart">
-                </div>
-            </div>    
-        </nav> -->
         <?php
             include_once '../navbar/navbar.php';
         ?>
@@ -100,71 +27,56 @@
                     </div>
                     <div class="third-page-sort">
                         <ul>
-                            <li><a href="homeplant.php">Homeplants</a></li>
-                            <li><a href="outdoor.php">Outdoor Plants</a></li>
-                            <li><a href="succulent.php">Succulents</a></li>
+
+                            <?php
+                                $sql2 = "SELECT * FROM category";
+                                $result2 = mysqli_query($conn, $sql2);
+                            
+                                
+                                // output data of each row
+                                while($row2 = mysqli_fetch_assoc($result2)) {
+                            
+                            ?> 
+                                    <li><a href="catalogue.php?id=<?php echo $row2["cat_id"] ?>"><?php echo  $row2["cat_name"] ?></a></li>
+                            <?php
+                                }
+                            ?>
+
                         </ul>
                     </div>
                         <div class="bestseller-content">
-                            <div class="bestseller-1 bestseller">
-                                <img src="img/image2.png" alt="snakeplant" class="top-image">
-                                    <h2 class="bestseller-title">Snake Plants</h2>
-                                    <p class="price">Php 400.00</p>
-                                    <a href="product-detail-2.php" class="view-plant-action">View plant</a>
-                            </div>
-                            <div class="bestseller-2 bestseller">
-                                <img src="img/image1.png" alt="monstera" class="top-image">
-                                <h2 class="bestseller-title">Monstera</h2>
-                                <p class="price">Php 600.00</p>
-                                <a href="product-detail-1.php" class="view-plant-action">View plant</a>
-                            </div>
-                            <div class="bestseller-3 bestseller">
-                                <img src="img/image3.jpg" alt="oregano" class="top-image">
-                                <h2 class="bestseller-title">Oregano</h2>
-                                <p class="price">Php 350.00</p>
-                                <a href="product-detail-3.php" class="view-plant-action">View plant</a>
-                            </div>
-                        </div>
+                    <?php 
+                        $sql = "SELECT * FROM products";
+                        if(isset($_GET['id'])){
+                            $catID = $_GET['id'];
+                            $sql .= " WHERE cat_id = '$catID'";
+                        }
+                        $result = mysqli_query($conn, $sql);
+                        
+                        $count = 1;
+                        while($row = mysqli_fetch_assoc($result)) {
+                            if($count > 3){
+                    ?> 
                         <div class="bestseller-content">
-                            <div class="bestseller-1 bestseller">
-                                <img src="img/image4.jpg" alt="cactus" class="top-image">
-                                <h2 class="bestseller-title">Cactus</h2>
-                                <p class="price">Php 400.00</p>
-                                <a href="product-detail-4.php" class="view-plant-action">View plant</a>
+                    <?php
+                                $count = 1;
+                            }  
+                    ?>
+                            <div class="bestseller-<?php echo  $count ?> bestseller">
+                                <img src="../admin/<?php echo  $row["thumb"] ?>" alt="<?php echo  $row["product_name"] ?>" class="top-image">
+                                    <h2 class="bestseller-title"><?php echo  $row["product_name"] ?></h2>
+                                    <p class="price">Php <?php echo  $row["price"] ?>.00</p>
+                                    <a href="single.php?id=<?php echo  $row["product_id"] ?>" class="view-plant-action">View plant</a>
                             </div>
-                            <div class="bestseller-2 bestseller">
-                                <img src="img/image1.png" alt="monstera" class="top-image">
-                                <h2 class="bestseller-title">Monstera</h2>
-                                <p class="price">Php 600.00</p>
-                                <a href="product-detail-1.php" class="view-plant-action">View plant</a>
-                            </div>
-                            <div class="bestseller-3 bestseller">
-                                <img src="img/image2.png" alt="snakeplant" class="top-image">
-                                <h2 class="bestseller-title">Snake Plant</h2>
-                                <p class="price">Php 250.00</p>
-                                <a href="product-detail-2.php" class="view-plant-action">View plant</a>
-                            </div>
-                        </div>
-                        <div class="bestseller-content">
-                            <div class="bestseller-1 bestseller">
-                                <img src="img/image3.jpg" alt="oregano" class="top-image">
-                                <h2 class="bestseller-title">Oregano</h2>
-                                <p class="price">Php 450.00</p>
-                                <a href="product-detail-3.php" class="view-plant-action">View plant</a>
-                            </div>
-                            <div class="bestseller-2 bestseller">
-                                <img src="img/image4.jpg" alt="cactus" class="top-image">
-                                <h2 class="bestseller-title">Cactus</h2>
-                                <p class="price">Php 300.00</p>
-                                <a href="product-detail-4.php" class="view-plant-action">View plant</a>
-                            </div>
-                            <div class="bestseller-3 bestseller">
-                                <img src="img/image1.png" alt="monstera" class="top-image">
-                                <h2 class="bestseller-title">Monstera</h2>
-                                <p class="price">Php 350.00</p>
-                                <a href="product-detail-1.php" class="view-plant-action">View plant</a>
-                            </div>
-                        </div>
+                    <?php
+                            $count = $count + 1;
+                            if($count > 3){
+                    ?>
+                                </div>
+                    <?php
+                            }
+                        }  
+                    ?>
                 </div>
             </section>
             <footer>

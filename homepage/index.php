@@ -1,3 +1,28 @@
+<?php 
+	//start the connection of the server
+    include_once '../config/db.php';
+    session_start(); //start the session of the server
+
+	if(isset($_POST['submit'])){
+	    $name = $_POST['name'];    //POST function to get what was the input for the username
+		$email = $_POST['email'];            //POST function to get what was the input for the email address
+		$msg= $_POST['message'];    //POST function to get what was the input for the password
+        
+        if($name != '' && $email != '' && $msg != ''){
+            $sql_u = "SELECT * FROM users WHERE username='$name'";
+            $res_u = mysqli_query($conn, $sql_u) or die(mysqli_error($conn));
+            $query_1 = "INSERT INTO partners (name, email, message) VALUES ('$name', '$email', '$msg')";
+            $result = mysqli_query($conn, $query_1) or die(mysqli_error($conn));
+
+            $_SESSION['partner'] = $name;
+            echo '<script>
+				window.location.href="index.php";
+				alert("Thank you for your collaboration!");
+				</script>';
+			exit();     
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -132,18 +157,19 @@
                     <div class="fourth-page-headline">
                         <h1>Become our partner!</h1>
                         <p>We love supporting our local gardeners. Send us a quick message and we will talk about it!</p>
-                        <form>
+                        <form method="post" action="">
                             <label for="name">Name/Organization</label>
-                            <input id="name" type="text" name="input-name" class="form-input">
+                            <input id="name" type="text" name="name" class="form-input" required>
                             <br>
                             <label for="email">Email</label>
-                            <input id="email" type="email" name="input-email" class="form-input">
+                            <input id="email" type="email" name="email" class="form-input" required>
                             <br>
                             <label for="message">Message</label>
-                            <textarea iname="message" cols="50" rows="3" class="form-input"></textarea>
+                            <textarea name="message" cols="50" rows="3" class="form-input" required></textarea>
                             <br>
+                            <input style="margin-top: 2rem;" type="submit" name ="submit" class="form-submit">
                         </form>
-                        <input type="submit" class="form-submit">
+                        
                     </div>
                     <div class="fourth-page-img">
                         <img src="images/page-4-image.png" alt="woman taking care of plants">

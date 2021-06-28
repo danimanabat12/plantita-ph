@@ -8,6 +8,10 @@
     <title>About Us | Plantita ph</title>
     <link rel="stylesheet" href="../navbar/style.css">
     <link rel="stylesheet" href="aboutus.css">
+    <?php 
+        session_start();
+        include('../config/db.php'); 
+    ?>
 </head>
 <body>
     <div class="container-wrapper">
@@ -64,7 +68,7 @@
                         <div class="team-4 team">
                             <img src="images/ron.jpg" alt="ron" class="top-image">
                             <h2 class="team-name">Ron Bryan M. Vertudes</h2>
-                            <p class="position">Chief of Staff Office of the CEO<br>   </p>
+                            <p class="position">Chief of Staff Office of the CEO<br>  </p>
                         </div>
                     </div>
                 </div>
