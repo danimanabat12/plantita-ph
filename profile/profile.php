@@ -87,7 +87,7 @@
                         <label for="email"><b>Email Address</b></label>
                         <p><?php echo $email; ?></p>
                         <label for="phone"><b> Number</b></label>
-                        <p>+63<?php echo $phone; ?></p>
+                        <p><?php echo $phone; ?></p>
 
                     </div>
                     <div class="fourth-page-img">
