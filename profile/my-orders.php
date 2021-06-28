@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/6f5f971efa.js" crossorigin="anonymous"></script>
     <title>Profile | Plantita ph</title>
     <link rel="stylesheet" href="../navbar/style.css">
-    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="../profile/myorder.css">
     <?php
     session_start();
     include('../config/db.php');
@@ -29,8 +29,12 @@
         include_once '../navbar/navbar.php';
         ?>
         <div class="sections">
-            <section class="fourth-page">
-                <div class="fourth-page-container">
+            <section class="table-container">
+                <div class="head-title">
+                    <h1>My Orders</h1>
+                </div>
+                <div class="container-content">
+                            <p>All orders</p>
                             <table>
                                 <thead>
                                     <tr>
@@ -86,7 +90,6 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="../navbar/app.js"></script>
-    <script src="main.js"></script>
 </body>
 
 </html>
