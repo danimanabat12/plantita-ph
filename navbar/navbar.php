@@ -190,7 +190,7 @@
                     </ul>
                 </div>
                 <div class="call-to-action">
-                    <?php if($count > 0) echo '<a href="../checkout-new/checkout.php">Proceed to checkout</a>'; else echo '<a href="#">Cart is Empty!</a>'; ?>
+                    <?php if($count > 0) echo '<a href="../checkout-new/checkout.php">Proceed to checkout</a>'; else echo '<a href="../catalogue/catalogue.php">Cart is Empty!</a>'; ?>
                 </div>
             </div>
             <div class="cart">
