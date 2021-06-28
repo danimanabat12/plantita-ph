@@ -4,7 +4,7 @@
     if(isset($_GET['id'])){
         $id = $_GET['id'];
         unset($_SESSION['cart'][$id]);
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
+        echo "<script>history.go(-1);</script>";
         exit;
     }
  ?>

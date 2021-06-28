@@ -423,7 +423,7 @@ button.sc-remove-btn {
 
 button.sc-remove-btn:hover {
     background-color: var(--clr--main);
-    color: var(--clr--bg);
+    color: var(--clr--white);
 }
 
 /* increase-decrease functioning */

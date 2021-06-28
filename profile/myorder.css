@@ -54,6 +54,11 @@ body {
     justify-content: space-between;
     margin: 0 auto;
     background-color: var(--clr--white);
+    z-index: 0;
+}
+
+nav {
+    z-index: 1;
 }
 
 .sections {
@@ -107,6 +112,7 @@ body {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
+    z-index: 0;
 }
 
 .container-content table th {
