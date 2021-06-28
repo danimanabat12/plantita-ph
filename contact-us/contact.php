@@ -1,74 +1,3 @@
-<?php //di ko sure asay tama aning duha
-        // //connection of the server
-        // $con = mysqli_connect('localhost', 'root', '', 'plantita_ph');
-        
-        // //the connection is unsuccessful
-        // if(!$con){
-        //     echo '<script type="text/javascript">';
-        //     echo ' alert("There is a connection error.")';  //showing an alert box.
-        //     echo '</script>';
-            
-        //     header("Location: signup.php");
-        //     exit();
-        // }
-
-        // if(isset($_POST['submit'])){
-        //     $name = mysqli_real_escape_string($con, $_POST['name']);
-        //     $email = mysqli_real_escape_string($con, $_POST['email']);
-        //     $msg = mysqli_real_escape_string($con, $_POST['message']);
-
-        //     $sql = "SELECT * FROM partners WHERE name = '$name'";
-        //     $query = mysqli_query($con, $sql) or die(mysqli_error($con));
-            
-        //     if (mysqli_num_rows($res_u) == 1) {    
-        //         $insert = "INSERT INTO partners (name, email, message) VALUES('$name', '$email', '$msg')";
-        //         $result = mysqli_query($con, $insert) or die(mysqli_error($con));
-        //         $message = 'Thank you for your collaboration!';
-        //     }
-        // }
-
-        // //close
-        // mysqli_close($con);
-
-			//start the connection of the server
-      include_once '../inc/config.db.php';
-
-      //session_start(); //start the session of the server
-			
-      //this function will validate the input
-			function validate($input){
-				$input = trim($input); 
-				$input = stripslashes($input);
-				$input = htmlspecialchars($input);
-				
-				return $input;            
-			}
-
-			if(isset($_POST['submit'])){
-				$name = validate($_POST["name"]);    //POST function to get what was the input for the username
-				$email = validate($_POST["email"]);            //POST function to get what was the input for the email address
-				$msg= validate($_POST["message"]);    //POST function to get what was the input for the password
-				
-				$sql_u = "SELECT * FROM users WHERE username='$name'";
-				//$sql_e = "SELECT * FROM users WHERE email='$txtEmail'";
-        //$sql_p = "SELECT * FROM users WHERE password='$txtPassword'";
-				$res_u = mysqli_query($con, $sql_u) or die(mysqli_error($con));
-				//$res_e = mysqli_query($con, $sql_e) or die(mysqli_error($con));
-
-        //$hash = password_hash($sql_p, PASSWORD_DEFAULT);
-
-				
-					$query_1 = "INSERT INTO partners (name, email, message)
-							VALUES ('$name', '$email', '$msg')";
-					$result = mysqli_query($con, $query_1) or die(mysqli_error($con));
-                    $message = 'Thank you for your collaborations!';
-                
-			}
-
-    // Close the connection
-    mysqli_close($con);
-	
-    ?>
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
@@ -80,20 +9,45 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../navbar/style.css">
     <link rel="stylesheet" href="style.css">
+
+    <?php 
+        session_start();
+        include('../config/db.php'); 
+			
+    //this function will validate the input
+	function validate($input){
+		$input = trim($input); 
+		$input = stripslashes($input);
+		$input = htmlspecialchars($input);
+				
+		return $input;            
+	}
+
+	if(isset($_POST['submit'])){
+	    $name = validate($_POST["name"]);    //POST function to get what was the input for the username
+		$email = validate($_POST["email"]);            //POST function to get what was the input for the email address
+		$msg= validate($_POST["message"]);    //POST function to get what was the input for the password
+				
+		$query_1 = "INSERT INTO partners (name, email, message) VALUES ('$name', '$email', '$msg')";
+		$result = mysqli_query($conn, $query_1) or die(mysqli_error($conn));
+        
+        echo '<script>
+			window.location.href="../contact-us/contact.php";
+			alert("Thank you for your collaborations!");
+			</script>';
+		exit();     
+	}
+	
+?>
 </head>
 <body>
     <div class="container-wrapper">
         <?php
-            include_once '../navbar/navbar.php';
+           include_once '../navbar/navbar.php';
         ?>
         <div class="sections">
             <div class="main-content-container">
                 <h1>Reach out</h1>
-                <?php 
-                    if(isset($message)){
-                        echo  '<label style= "color: #164a41; text-align: center; margin-bottom: 2rem; font-size: 2rem;">'.$message. '</label>';
-                    }
-                ?>
                 <div class="second-part" >
                     <div class="sp-title">
                         <h2>Customer Service</h2>
@@ -104,8 +58,8 @@
                         <p>hello@plantita.ph</p>
                     </div>
                     <div class="sp-title">
-                        <h2>Site Inquiries</h2>
-                        <p>devs@plantita.ph</p>
+                        <h2>General Inquiries</h2>
+                        <p>hello@plantita.ph</p>
                     </div>
                 </div>
                 <div class="third-part">
@@ -115,12 +69,15 @@
                             <input type="text" name="name" id="cntct-name" placeholder="Name" required>
                         </div>
                         <div class="style-input">
+                            <!-- <label for="email">Email</label> -->
                             <input type="email" name="email" id="cntct-email" placeholder="Email" required>
                         </div>
                         <div class="style-input">
+                            <!-- <label for="message">Message</label> -->
                             <textarea name="message" id="cntct-message" placeholder="Message" class="input-full" required></textarea>
                         </div>
                         <input name="submit" type="submit" value="Submit" class="btn-solid">
+                        <!-- <button  name="submit"  type="submit" class="btn-solid">Submit</button> -->
                     </form>
                 </div>
             </div>
