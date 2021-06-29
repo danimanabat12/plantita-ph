@@ -56,7 +56,7 @@
                         $sql4 = "INSERT INTO password FROM users WHERE password = '$newPwd2' and id = '$userID'";
                         $result2 = mysqli_query($conn, $sql4);
                         
-                        $newPwd2 = $_SESSION['password'];
+                        $_SESSION['password'] = $newPwd2;
                         //successfully updated
                         $message = 'Your password has been updated.';
                 }
