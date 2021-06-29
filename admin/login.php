@@ -71,6 +71,6 @@
         <section class="copy"></section>
       </div>
     </div>
-    <script src="main.js"></script>
+    <script src="../signup-login/main.js"></script>
   </body>
 </html>
