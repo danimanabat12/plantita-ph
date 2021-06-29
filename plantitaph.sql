@@ -142,9 +142,9 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`product_id`, `product_name`, `cat_id`, `price`, `thumb`, `product_description`) VALUES
-(1, 'Monstera', 1, '600', 'uploads/image3.jpg', 'Monstera deliciosa plant is also known as the \"tropical split-leaf philodendron.\" This climbing evergreen is a popular easy-to-grow houseplant and a favorite of many interior designers for both reside'),
+(1, 'Monstera', 1, '600', 'uploads/image1.jpg', 'Monstera deliciosa plant is also known as the \"tropical split-leaf philodendron.\" This climbing evergreen is a popular easy-to-grow houseplant and a favorite of many interior designers for both reside'),
 (2, 'Snake Plant', 2, '400', 'uploads/image2.jpg', 'Sansevieria trifasciata (also known as snake plant or mother-in-law\'s tongue) is one of the most pop'),
-(3, 'Oregano', 2, '350', 'uploads/image1.jpg', 'Possibly one of the most recognized herbs in the cook\'s garden, oregano is easy to grow and adds ple'),
+(3, 'Oregano', 2, '350', 'uploads/image3.jpg', 'Possibly one of the most recognized herbs in the cook\'s garden, oregano is easy to grow and adds ple'),
 (4, 'Cactus', 3, '350', 'uploads/image4.jpg', 'A cactus is a kind of a plant adapted to hot, dry climates. Cactus are popular and familiar, and bot');
 
 -- --------------------------------------------------------
