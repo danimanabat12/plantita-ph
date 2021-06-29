@@ -42,39 +42,35 @@
                 <th>Thumbnail</th>
                 <th>Action</th>
               </tr>
-				  </thead>  
-                <?php
-                    $sql = "SELECT * FROM Category";
-                    $result = mysqli_query($conn, $sql);
+				    </thead>  
+            <tbody>
+              <?php
+                $sql = "SELECT * FROM products";
+                $result = mysqli_query($conn, $sql);
 
-                    if (mysqli_num_rows($result) > 0) {
-                        // output data of each row
-                        while($row = mysqli_fetch_assoc($result)) {
-                ?>
-                <tbody>
-                  <?php
-                    $sql = "SELECT * FROM products";
-                    $result = mysqli_query($conn, $sql);
-
-                    if (mysqli_num_rows($result) > 0) {
-                      // output data of each row
-                      while($row = mysqli_fetch_assoc($result)) {
-                  ?>
-                <tr>
-                    <td><?php echo $row["product_name"] ?></td>
-                    <td><?php echo $row["cat_id"] ?></td>
-                    <td><?php if(isset($row["thumb"])){echo 'yes'; }else{ echo 'No'; }  ?></td> 
-                    <td><a href='editProducts.php?id=<?php echo $row["product_id"]; ?>'>Edit</a> 
-                    | <a href='delProducts.php?id=<?php echo $row["product_id"]; ?>'>Delete</a></td>
-                </tr>
-                  <?php
-                      }
-                  } 
-                  else {
-                    echo '0 results';
-                  }}}
-                  ?>
-                </tbody>
+                if (mysqli_num_rows($result) > 0) {
+                  // output data of each row
+                  while($row = mysqli_fetch_assoc($result)) {
+                    $cat_id2 = $row["cat_id"];
+                    $sql1 = "SELECT * FROM category WHERE cat_id = '$cat_id2'";
+                    $result1 = mysqli_query($conn, $sql1);
+                    $row1 = mysqli_fetch_assoc($result1)
+              ?>
+            <tr>
+                <td><?php echo $row["product_name"] ?></td>
+                <td><?php echo $row1["cat_name"] ?></td>
+                <td><?php if($row["thumb"]== '')echo 'No';else echo 'Yes';  ?></td> 
+                <td><a href='editProducts.php?id=<?php echo $row["product_id"]; ?>'>Edit</a> 
+                | <a href='delProducts.php?id=<?php echo $row["product_id"]; ?>'>Delete</a></td>
+            </tr>
+              <?php
+                  }
+              } 
+              else {
+                echo '0 results';
+              }
+              ?>
+            </tbody>
         </table>
         </div>
       </div>
