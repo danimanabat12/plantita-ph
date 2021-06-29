@@ -17,7 +17,7 @@
             $_SESSION['partner'] = $name;
             echo '<script>
 				window.location.href="index.php";
-				alert("Thank you for your collaboration!");
+				alert("Thank you for taking an interest in collaborating with us!");
 				</script>';
 			exit();     
         }
