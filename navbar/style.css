@@ -177,7 +177,7 @@ nav a {
 .catalogue-links { 
     margin-top: 1rem;
     margin-bottom: 1rem;
-    max-height: 5rem;
+    max-height: 4rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
