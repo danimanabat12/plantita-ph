@@ -6,18 +6,16 @@
     session_start();
     include('../config/db.php'); 
 
+    //get from current link single.php?id=#
     if(isset($_GET['id'])){
         $product_id = $_GET['id'];
-       $sql = "SELECT * FROM products  WHERE product_id='$product_id'";
-       $result = mysqli_query($conn, $sql);
+        $sql = "SELECT * FROM products  WHERE product_id='$product_id'";
+        $result = mysqli_query($conn, $sql);
      
-    $row = mysqli_fetch_assoc($result);
-    
-    $product_name  = $row['product_name'];
-    $cat_id  = $row['cat_id']; 
-    $price  = $row['price'];
-    $product_description  = $row['product_description'];
-    $thumb  = $row['thumb'];
+        $row = mysqli_fetch_assoc($result);
+        
+        //for product details
+        $product_name  = $row['product_name'];
     }
 ?>
 
@@ -33,6 +31,27 @@
     <div class="container-wrapper">
         <?php
             include_once '../navbar/navbar.php';
+                //get from current link single.php?id=#
+            if(isset($_GET['id'])){
+                $product_id = $_GET['id'];
+                $sql = "SELECT * FROM products  WHERE product_id='$product_id'";
+                $result = mysqli_query($conn, $sql);
+            
+                $row = mysqli_fetch_assoc($result);
+                
+                //for product details
+                $product_name  = $row['product_name'];
+                $cat_id  = $row['cat_id'];
+                $price  = $row['price'];
+                $product_description  = $row['product_description'];
+                $thumb  = $row['thumb'];
+
+                //for category name
+                $sql2 = "SELECT * FROM category WHERE cat_id = '$cat_id'";
+                $result2 = mysqli_query($conn, $sql2);
+                $row2 = mysqli_fetch_assoc($result2);
+                $cat_name = $row2["cat_name"];
+            }
         ?>
        <!---content-->
        <div class="sections">
@@ -43,13 +62,7 @@
                     </div>
                     <div class="hero-headlines">
                         <h1><?php echo $product_name ?></h1>
-                        <?php
-                            $sql2 = "SELECT * FROM Category where cat_id = '$cat_id'";
-                            $result2 = mysqli_query($conn, $sql2); 
-                            // output data of each row
-                            $row2 = mysqli_fetch_assoc($result2)
-                        ?> 
-                        <a style="text-decoration:none;" href="catalogue.php?id=<?php echo $cat_id ?>" class="category-plant-action"><p style="color:#164a41;"><b><?php echo $row2["cat_name"] ?></b></p></a>
+                        <a style="text-decoration:none;" href="catalogue.php?id=<?php echo $cat_id ?>" class="category-plant-action"><p style="color:#164a41;"><b><?php echo $cat_name ?></b></p></a>
   
                         <p><?php echo $product_description ?></p>
                         <p id="price">Php <?php echo $price ?>.00</p>
