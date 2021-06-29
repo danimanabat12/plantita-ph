@@ -155,7 +155,7 @@ Edit Products
   <div class="form-group">
 			    <label for="productimage">Product Image</label>
 			    <input type="file" name="productimage" id="productimage">
-			    <p class="help-block">Only jpg/png are allowed.</p>
+			    <p class="help-block">Only .jpg images are allowed.</p>
 			  </div>
 
 				  <?php
