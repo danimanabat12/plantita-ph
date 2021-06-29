@@ -18,18 +18,18 @@
           $mypassword = $_POST['password'];
 					
           //select the data from table
-				  $sql = "SELECT * FROM users WHERE username='$myusername'";
+		$sql = "SELECT * FROM users WHERE username='$myusername'";
 
           //store the result from the query we have made
           $result = mysqli_query($conn, $sql); 
 
-					if (mysqli_num_rows($result) > 0){
+	if (mysqli_num_rows($result) > 0){
               $check = mysqli_fetch_assoc($result);
               if($mypassword == $check["password"]){
                 
                 // Password is correct, so start a new session
-                session_start();
                 $_SESSION['username'] = $myusername;
+                $_SESSION['user_id'] = $check["id"];
                 header('location: ../homepage/index.php');
                 exit();
               }
