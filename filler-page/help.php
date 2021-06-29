@@ -43,7 +43,7 @@
             <footer>
                 <div class="footer-container">
                     <div class="footer-logo">
-                        <img src="img/Logo.svg" alt="logo-for-footer" class="logo-footer">
+                        <img src="../homepage/images/Logo.svg" alt="logo-for-footer" class="logo-footer">
                         <h2 class="footer-headings">plantita.ph</h2>
                     </div>
                     <div class="footer-socmeds">
