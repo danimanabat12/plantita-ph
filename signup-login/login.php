@@ -12,32 +12,35 @@
 
         session_start(); //start the session of the server
 				
-        //muandar ni kaso walay checking maot
         //if the user submits the form
-				if(isset($_POST["login"])){
+        if(isset($_POST["login"])){
           $myusername = mysqli_real_escape_string($conn, $_POST['username']);
-          $mypassword = mysqli_real_escape_string($conn, $_POST['password']);
+          $mypassword = $_POST['password'];
 					
-            //select the data from table
-				   $sql = "SELECT * FROM users WHERE username='$myusername' and password='$mypassword'";
-           //store the result from the query we have made
-           $result = mysqli_query($conn, $sql);
-           $check = mysqli_fetch_assoc($result);
-           
-					if (mysqli_num_rows($result) > 0) {
-            $mypassword = mysqli_num_rows($result);
-              if($mypassword == true){
+          //select the data from table
+				  $sql = "SELECT * FROM users WHERE username='$myusername'";
+
+          //store the result from the query we have made
+          $result = mysqli_query($conn, $sql); 
+
+					if (mysqli_num_rows($result) > 0){
+              $check = mysqli_fetch_assoc($result);
+              if($mypassword == $check["password"]){
+                
+                // Password is correct, so start a new session
+                session_start();
                 $_SESSION['username'] = $myusername;
-                $_SESSION['user_id'] = $check["id"];
                 header('location: ../homepage/index.php');
+                exit();
               }
-              else if($mypassword == false){
+              else{
                 $message =  'Invalid password!';
-              }   
-					  }
-            else{
-					    $message =  'Account is not registered.';
-					}
+              }
+          }
+          else{
+					  $message =  'Account is not registered.';
+				  }
+				
 				}
 			?>
   </head>
