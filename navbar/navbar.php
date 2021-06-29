@@ -70,17 +70,14 @@
                         // output data of each row
                         $count_cat = 1;
                         while($row2 = mysqli_fetch_assoc($result2)) {
-                            if($count_cat < 6){
-                    ?> 
-                                <li><a href="../catalogue/catalogue.php?id=<?php echo $row2["cat_id"] ?>"><?php echo  $row2["cat_name"] ?></a></li>
-                    <?php
-                            }
-                            else{
-                    ?>
-                                <li><a href="../catalogue/catalogue.php"><b>more categories</b></a></li>
-                    <?php
+                            if($count_cat == 6){
+                                echo '<li><a href="../catalogue/catalogue.php"><b>more categories</b></a></li>';
                                 break;
                             }
+                    ?> 
+                            <li><a href="../catalogue/catalogue.php?id=<?php echo $row2["cat_id"] ?>"><?php echo  $row2["cat_name"] ?></a></li>
+                    <?php
+                            $count_cat++;
                         }
                     ?>
                             </ul>
@@ -198,4 +195,5 @@
             </div>
         </div>    
     </nav>
+ 
  
